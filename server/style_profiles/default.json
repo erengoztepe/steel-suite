@@ -1,0 +1,186 @@
+{
+  "name": "default (ISO)",
+  "description": "Neutral house style shipped with steel-suite: ISO 128 line types, ISO 3098 text heights (2.5 / 3.5 / 5 mm at 1:10), generic layer names. Copy this file to local.json (git-ignored) to define your own office style.",
+  "layers": [
+    {
+      "role": "visible",
+      "name": "STEEL-VISIBLE",
+      "color": 7,
+      "linetype": "Continuous",
+      "lineweight": 35,
+      "plot": 1
+    },
+    {
+      "role": "visible_thin",
+      "name": "STEEL-VISIBLE-THIN",
+      "color": 7,
+      "linetype": "Continuous",
+      "lineweight": 18,
+      "plot": 1
+    },
+    {
+      "role": "cut",
+      "name": "STEEL-CUT",
+      "color": 7,
+      "linetype": "Continuous",
+      "lineweight": 50,
+      "plot": 1
+    },
+    {
+      "role": "hidden",
+      "name": "STEEL-HIDDEN",
+      "color": 8,
+      "linetype": "Continuous",
+      "lineweight": 18,
+      "plot": 1
+    },
+    {
+      "role": "axis",
+      "name": "STEEL-AXIS",
+      "color": 1,
+      "linetype": "Continuous",
+      "lineweight": 13,
+      "plot": 1
+    },
+    {
+      "role": "limit",
+      "name": "STEEL-LIMIT",
+      "color": 2,
+      "linetype": "Continuous",
+      "lineweight": 13,
+      "plot": 1
+    },
+    {
+      "role": "bolt",
+      "name": "STEEL-BOLT",
+      "color": 3,
+      "linetype": "Continuous",
+      "lineweight": 25,
+      "plot": 1
+    },
+    {
+      "role": "hatch",
+      "name": "ANNO-HATCH",
+      "color": 8,
+      "linetype": "Continuous",
+      "lineweight": 9,
+      "plot": 1
+    },
+    {
+      "role": "text",
+      "name": "ANNO-TEXT",
+      "color": 7,
+      "linetype": "Continuous",
+      "lineweight": 18,
+      "plot": 1
+    },
+    {
+      "role": "dimension",
+      "name": "ANNO-DIM",
+      "color": 7,
+      "linetype": "Continuous",
+      "lineweight": 13,
+      "plot": 1
+    },
+    {
+      "role": "title_block",
+      "name": "SHEET-TITLE",
+      "color": 7,
+      "linetype": "Continuous",
+      "lineweight": 25,
+      "plot": 1
+    },
+    {
+      "role": "note",
+      "name": "SHEET-NOTE",
+      "color": 7,
+      "linetype": "Continuous",
+      "lineweight": 13,
+      "plot": 1
+    },
+    {
+      "role": "frame",
+      "name": "SHEET-FRAME",
+      "color": 7,
+      "linetype": "Continuous",
+      "lineweight": 50,
+      "plot": 1
+    }
+  ],
+  "linetypes": {
+    "ISO02W025": {
+      "pattern": [
+        3.75,
+        3.0,
+        -0.75
+      ],
+      "description": "ISO 128 dashed, 0.25 pen"
+    },
+    "ISO04W025": {
+      "pattern": [
+        7.5,
+        6.0,
+        -0.75,
+        0.0,
+        -0.75
+      ],
+      "description": "ISO 128 long-dash dot, 0.25 pen"
+    }
+  },
+  "entity_linetype": {
+    "hidden": "ISO02W025",
+    "axis": "ISO04W025"
+  },
+  "text_styles": [
+    {
+      "name": "Arial",
+      "font": "arial.ttf",
+      "width": 1.0
+    },
+    {
+      "name": "STEEL-TEXT",
+      "font": "arial.ttf",
+      "width": 1.0
+    }
+  ],
+  "text_style": "STEEL-TEXT",
+  "sheet_text_style": "Arial",
+  "text_height": {
+    "title": 50.0,
+    "sub": 35.0,
+    "label": 25.0
+  },
+  "dimension": {
+    "tick_block": "STEEL_TICK",
+    "tick_run": 25.0,
+    "tick_rise": 25.0,
+    "text_height": 25.0,
+    "ext_beyond": 20.0,
+    "ext_offset": 10.0,
+    "text_gap": 10.0
+  },
+  "leader_arrow": {
+    "label": [
+      30.0,
+      10.0
+    ],
+    "weld": [
+      30.0,
+      10.0
+    ]
+  },
+  "view_title": {
+    "bubble_r": 75.0
+  },
+  "section_mark": {
+    "bubble_r": 50.0,
+    "arrow_in": 50.0,
+    "arrow_out": 75.0,
+    "tick_len": 30.0,
+    "tick_w": 7.5
+  },
+  "hatch": {
+    "pattern": "ANSI31",
+    "scale": 5.0
+  }
+}

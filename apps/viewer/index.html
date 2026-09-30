@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en" data-theme="dark" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Member Vectors — Steel Joint Extractor</title>
+    <style>
+      html, body, #root { height: 100%; margin: 0; }
+      body { background: #0b0f14; }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/main.tsx"></script>
+    <!-- Author mark: "EREN GÖZTEPE" across the whole window, click-through, top window only
+         (so the drawing tab's iframe does not show it twice); it restores itself if removed. -->
+    <script>
+    (function(){try{
+      if(window.self!==window.top)return;
+      var ID="__bgfx";
+      var svg="<svg xmlns='http://www.w3.org/2000/svg' width='1200' height='800' viewBox='0 0 1200 800'><g font-family='Arial,Helvetica,sans-serif' font-size='58' font-weight='700' fill='rgba(150,150,150,0.225)' text-anchor='middle'><text x='370' y='300' transform='rotate(-32 370 300)'>EREN GÖZTEPE</text><text x='830' y='560' transform='rotate(-32 830 560)'>EREN GÖZTEPE</text></g></svg>";
+      var BG='url("data:image/svg+xml;utf8,'+encodeURIComponent(svg)+'")';
+      function ensure(){
+        var b=document.body;if(!b)return;
+        var el=document.getElementById(ID);
+        if(!el){el=document.createElement("div");el.id=ID;b.appendChild(el);}
+        var s=el.style;
+        s.setProperty("position","fixed","important");
+        s.setProperty("inset","0","important");
+        s.setProperty("width","100vw","important");
+        s.setProperty("height","100vh","important");
+        s.setProperty("margin","0","important");
+        s.setProperty("padding","0","important");
+        s.setProperty("pointer-events","none","important");
+        s.setProperty("z-index","2147483647","important");
+        s.setProperty("display","block","important");
+        s.setProperty("visibility","visible","important");
+        s.setProperty("opacity","1","important");
+        s.setProperty("background-image",BG,"important");
+        s.setProperty("background-repeat","no-repeat","important");
+        s.setProperty("background-size","100% 100%","important");
+        s.setProperty("background-position","center","important");
+      }
+      ensure();
+      document.addEventListener("DOMContentLoaded",ensure);
+      setInterval(ensure,300);
+      try{new MutationObserver(ensure).observe(document.documentElement,{childList:true,subtree:true});}catch(e){}
+    }catch(e){}})();
+    </script>
+  </body>
+</html>

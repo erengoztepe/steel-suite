@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8" />
+<title>IOM+IFC → DXF</title>
+<style>
+  body { font-family: system-ui, sans-serif; max-width: 640px; margin: 4rem auto; color: #222; }
+  h1 { font-size: 1.3rem; }
+  #drop {
+    border: 2px dashed #888; border-radius: 8px; padding: 3rem 1rem;
+    text-align: center; color: #555; cursor: pointer; transition: background .15s, border-color .15s;
+  }
+  #drop.over { background: #eef6ff; border-color: #2b7de9; }
+  #files { margin-top: 1rem; font-size: .9rem; }
+  #files div { padding: .2rem 0; }
+  #outdir { margin-top: 1rem; }
+  #outdir label { display: block; font-size: .85rem; color: #555; margin-bottom: .3rem; }
+  #outdir .row { display: flex; gap: .5rem; }
+  #outdir input { flex: 1; min-width: 0; box-sizing: border-box; padding: .5rem; font-size: .9rem; font-family: inherit; }
+  #browse { padding: .5rem .9rem; font-size: .9rem; }
+  #units { margin-top: 1rem; }
+  #units > label { display: block; font-size: .85rem; color: #555; margin-bottom: .3rem; }
+  #units .opt { display: flex; gap: .5rem; align-items: flex-start; padding: .35rem 0; font-size: .9rem; }
+  #units .opt input { margin-top: .25rem; }
+  #units .hint { display: block; color: #666; font-size: .8rem; }
+  .btnrow { margin-top: 1rem; display: flex; gap: .6rem; }
+  button { padding: .6rem 1.4rem; font-size: 1rem; cursor: pointer; }
+  button:disabled { opacity: .5; cursor: not-allowed; }
+  #status { margin-top: 1rem; font-size: .9rem; white-space: pre-wrap; }
+  #status.error { color: #b00020; }
+  input[type=file] { display: none; }
+  #wip {
+    margin: 0 0 1.5rem; padding: .8rem 1rem; border: 1px solid #e0b252; border-left-width: 5px;
+    border-radius: 6px; background: #fff8e6; color: #5c4400; font-size: .9rem; line-height: 1.45;
+  }
+  #wip strong { display: block; margin-bottom: .2rem; font-size: .95rem; }
+</style>
+</head>
+<body>
+  <div id="wip" role="note">
+    <strong>Work in progress</strong>
+    The DXF detail generator is experimental. Drawings are not production-ready yet &mdash;
+    check every sheet before using it. The IFC viewer / Member Vectors tab is the stable part of steel-suite.
+  </div>
+  <h1>IOM + IFC → DXF</h1>
+  <p>IDEA StatiCa export'undan bir <code>.xml</code> (IOM) ve aynı bağlantıya ait <code>.ifc</code> dosyasını birlikte sürükle-bırak veya seç.</p>
+
+  <div id="drop">
+    Dosyaları buraya bırak, ya da tıklayıp seç
+    <input id="picker" type="file" multiple accept=".xml,.ifc" />
+  </div>
+  <div id="files"></div>
+  <div id="outdir">
+    <label for="outdirInput">Çıktı klasörü (DXF buraya yazılır)</label>
+    <div class="row">
+      <input id="outdirInput" type="text" placeholder="ör. C:\Users\...\output" />
+      <button id="browse" type="button">Gözat…</button>
+    </div>
+  </div>
+  <div id="units">
+    <label>Çizim birimi</label>
+    <label class="opt">
+      <input type="radio" name="units" value="mm" checked />
+      <span><strong>mm</strong> — 1 birim = 1 mm
+        <span class="hint">mm-tabanlı çizim. Kesik çizgi tireleri 1:10 kağıtta doğru
+        basar ama Model sekmesinde çok kısa görünür — inceleme Layout'tan.</span>
+      </span>
+    </label>
+    <label class="opt">
+      <input type="radio" name="units" value="cm" />
+      <span><strong>cm</strong> — 1 birim = 1 cm
+        <span class="hint">cm-tabanlı çizim. Ölçü metinleri DIMLFAC ile yine mm okur;
+        kesik çizgiler Model sekmesinde net görünür. Kağıt çıktısı iki seçenekte de aynı.</span>
+      </span>
+    </label>
+  </div>
+  <div class="btnrow">
+    <button id="go" disabled>DXF Üret</button>
+    <button id="dl" disabled>İndir</button>
+  </div>
+  <div id="status"></div>
+
+<script>
+  const drop = document.getElementById('drop');
+  const picker = document.getElementById('picker');
+  const filesEl = document.getElementById('files');
+  const go = document.getElementById('go');
+  const dl = document.getElementById('dl');
+  const outdirInput = document.getElementById('outdirInput');
+  const browse = document.getElementById('browse');
+  const status = document.getElementById('status');
+  let selected = [];
+  let lastPath = null;
+
+  const savedDir = localStorage.getItem('outputDir');
+  if (savedDir) {
+    outdirInput.value = savedDir;
+  } else {
+    fetch('/config').then(r => r.json()).then(cfg => { outdirInput.value = cfg.defaultOutputDir; }).catch(() => {});
+  }
+  outdirInput.addEventListener('input', () => localStorage.setItem('outputDir', outdirInput.value));
+
+  // Unit base, remembered like the output folder: it is a per-user drafting preference, not a
+  // per-file property, so re-picking it on every run would just be friction.
+  const unitRadios = [...document.querySelectorAll('input[name=units]')];
+  const savedUnits = localStorage.getItem('units');
+  if (savedUnits) {
+    const hit = unitRadios.find(r => r.value === savedUnits);
+    if (hit) hit.checked = true;
+  }
+  const currentUnits = () => (unitRadios.find(r => r.checked) || { value: 'mm' }).value;
+  unitRadios.forEach(r => r.addEventListener('change', () => localStorage.setItem('units', currentUnits())));
+
+  browse.addEventListener('click', async () => {
+    browse.disabled = true;
+    const prevText = browse.textContent;
+    browse.textContent = 'Açılıyor…';
+    try {
+      const resp = await fetch('/browse', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ currentDir: outdirInput.value }),
+      });
+      const body = await resp.json().catch(() => ({ error: resp.statusText }));
+      if (body.error) {
+        status.className = 'error';
+        status.textContent = body.error;
+        return;
+      }
+      if (body.path) {
+        outdirInput.value = body.path;
+        localStorage.setItem('outputDir', body.path);
+      }
+    } catch (e) {
+      status.className = 'error';
+      status.textContent = String(e);
+    } finally {
+      browse.disabled = false;
+      browse.textContent = prevText;
+    }
+  });
+
+  function render() {
+    filesEl.innerHTML = selected.map(f => `<div>${f.name.endsWith('.ifc') ? '📐' : '📄'} ${f.name} (${(f.size/1024).toFixed(1)} KB)</div>`).join('');
+    const hasXml = selected.some(f => /\.xml$/i.test(f.name));
+    const hasIfc = selected.some(f => /\.ifc$/i.test(f.name));
+    go.disabled = !(hasXml && hasIfc);
+  }
+
+  function setFiles(fileList) {
+    selected = Array.from(fileList).slice(0, 2);
+    lastPath = null;
+    dl.disabled = true;
+    render();
+  }
+
+  drop.addEventListener('click', () => picker.click());
+  picker.addEventListener('change', () => setFiles(picker.files));
+
+  ['dragover', 'dragenter'].forEach(ev => drop.addEventListener(ev, e => {
+    e.preventDefault(); drop.classList.add('over');
+  }));
+  ['dragleave', 'drop'].forEach(ev => drop.addEventListener(ev, e => {
+    e.preventDefault(); drop.classList.remove('over');
+  }));
+  drop.addEventListener('drop', e => setFiles(e.dataTransfer.files));
+
+  go.addEventListener('click', async () => {
+    go.disabled = true;
+    dl.disabled = true;
+    lastPath = null;
+    status.className = '';
+    status.textContent = 'İşleniyor…';
+    localStorage.setItem('outputDir', outdirInput.value);
+    const form = new FormData();
+    for (const f of selected) form.append('files', f);
+    form.append('outputDir', outdirInput.value);
+    form.append('units', currentUnits());
+    try {
+      const resp = await fetch('/generate', { method: 'POST', body: form });
+      const body = await resp.json().catch(() => ({ error: resp.statusText }));
+      if (!resp.ok || !body.ok) {
+        status.className = 'error';
+        status.textContent = (body.error || 'Hata') + (body.log ? '\n\n' + body.log : '');
+        return;
+      }
+      lastPath = body.outputPath;
+      dl.disabled = false;
+      status.textContent = `Hazır (1 birim = 1 ${body.units || currentUnits()}): ${body.outputPath}`;
+    } catch (e) {
+      status.className = 'error';
+      status.textContent = String(e);
+    } finally {
+      go.disabled = false;
+    }
+  });
+
+  dl.addEventListener('click', () => {
+    if (lastPath) window.location.href = `/download?path=${encodeURIComponent(lastPath)}`;
+  });
+</script>
+<!-- Author mark: "EREN GÖZTEPE" across the whole window, click-through, top window only
+     (so the drawing tab's iframe does not show it twice); it restores itself if removed. -->
+<script>
+(function(){try{
+  if(window.self!==window.top)return;
+  var ID="__bgfx";
+  var svg="<svg xmlns='http://www.w3.org/2000/svg' width='1200' height='800' viewBox='0 0 1200 800'><g font-family='Arial,Helvetica,sans-serif' font-size='58' font-weight='700' fill='rgba(150,150,150,0.225)' text-anchor='middle'><text x='370' y='300' transform='rotate(-32 370 300)'>EREN GÖZTEPE</text><text x='830' y='560' transform='rotate(-32 830 560)'>EREN GÖZTEPE</text></g></svg>";
+  var BG='url("data:image/svg+xml;utf8,'+encodeURIComponent(svg)+'")';
+  function ensure(){
+    var b=document.body;if(!b)return;
+    var el=document.getElementById(ID);
+    if(!el){el=document.createElement("div");el.id=ID;b.appendChild(el);}
+    var s=el.style;
+    s.setProperty("position","fixed","important");
+    s.setProperty("inset","0","important");
+    s.setProperty("width","100vw","important");
+    s.setProperty("height","100vh","important");
+    s.setProperty("margin","0","important");
+    s.setProperty("padding","0","important");
+    s.setProperty("pointer-events","none","important");
+    s.setProperty("z-index","2147483647","important");
+    s.setProperty("display","block","important");
+    s.setProperty("visibility","visible","important");
+    s.setProperty("opacity","1","important");
+    s.setProperty("background-image",BG,"important");
+    s.setProperty("background-repeat","no-repeat","important");
+    s.setProperty("background-size","100% 100%","important");
+    s.setProperty("background-position","center","important");
+  }
+  ensure();
+  document.addEventListener("DOMContentLoaded",ensure);
+  setInterval(ensure,300);
+  try{new MutationObserver(ensure).observe(document.documentElement,{childList:true,subtree:true});}catch(e){}
+}catch(e){}})();
+</script>
+</body>
+</html>

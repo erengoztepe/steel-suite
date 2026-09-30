@@ -1,0 +1,18 @@
+{
+  "name": "steel-suite",
+  "private": true,
+  "license": "MIT",
+  "description": "IDEA StatiCa/IFC -> AutoCAD steel connection detailing: IFC geometry viewer + DXF drawing generator, one dev server, two tabs.",
+  "workspaces": [
+    "apps/*"
+  ],
+  "scripts": {
+    "dev": "npm --workspace apps/viewer run dev:combined",
+    "dev:viewer": "npm --workspace apps/viewer run dev",
+    "dev:drawgen": "npm --workspace apps/drawgen run web",
+    "build:viewer": "npm --workspace apps/viewer run build",
+    "build:spec": "npm --workspace apps/drawgen run build:spec",
+    "verify": "npm --workspace apps/drawgen run verify",
+    "test:py": "pytest -q"
+  }
+}

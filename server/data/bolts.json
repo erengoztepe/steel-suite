@@ -1,0 +1,289 @@
+{
+ "Metric hex head bolt (ISO 4014) with hex nut (ISO 4032) and plain washer (ISO 7089); standard/commercial series": {
+  "family": "ISO 4014/4032 standard (non heavy-hex) metric series, ISO 7089 plain washer",
+  "units": "mm",
+  "source": "Listed FIRST deliberately: server/build.ts's loadBoltDims() takes the FIRST family seen per diameter, so this standard series is the DEFAULT bolt glyph unless a connection's own assembly is later marked HR/HV (preloaded structural, EN 14399), which should prefer the heavier series below instead. For M16 the two series differ visibly: ISO 4014 across-flats 24 / across-corners 27.71 (= 24 / cos30) vs EN 14399 heavy-hex 27 / 31.18. Across-flats (s) per ISO 4014 standard series; across-corners e = s / cos(30deg) = s * 2/sqrt(3). Head height (k), nut thickness (m, ISO 4032 style 1), washer thickness (ISO 7089) and EN 1090-2 normal-round-hole clearance are IDENTICAL between the standard and heavy-hex series (only across-flats/corners differs), so those four columns are carried over unchanged from the verified heavy-hex table below.",
+  "items": [
+   {
+    "size": "M12",
+    "grade": "8.8/10.9",
+    "dims": {
+     "shank_d": 12,
+     "s": 18,
+     "e": 20.78,
+     "k": 7.5,
+     "m": 10.8,
+     "washer_thickness": 2.5,
+     "std_hole": 13
+    }
+   },
+   {
+    "size": "M16",
+    "grade": "8.8/10.9",
+    "dims": {
+     "shank_d": 16,
+     "s": 24,
+     "e": 27.71,
+     "k": 10,
+     "m": 14.8,
+     "washer_thickness": 3,
+     "std_hole": 18
+    }
+   },
+   {
+    "size": "M20",
+    "grade": "8.8/10.9",
+    "dims": {
+     "shank_d": 20,
+     "s": 30,
+     "e": 34.64,
+     "k": 12.5,
+     "m": 18,
+     "washer_thickness": 3,
+     "std_hole": 22
+    }
+   },
+   {
+    "size": "M24",
+    "grade": "8.8/10.9",
+    "dims": {
+     "shank_d": 24,
+     "s": 36,
+     "e": 41.57,
+     "k": 15,
+     "m": 21.5,
+     "washer_thickness": 4,
+     "std_hole": 26
+    }
+   },
+   {
+    "size": "M27",
+    "grade": "8.8/10.9",
+    "dims": {
+     "shank_d": 27,
+     "s": 41,
+     "e": 47.34,
+     "k": 17,
+     "m": 23.8,
+     "washer_thickness": 4,
+     "std_hole": 30
+    }
+   },
+   {
+    "size": "M30",
+    "grade": "8.8/10.9",
+    "dims": {
+     "shank_d": 30,
+     "s": 46,
+     "e": 53.12,
+     "k": 18.7,
+     "m": 25.6,
+     "washer_thickness": 4,
+     "std_hole": 33
+    }
+   },
+   {
+    "size": "M36",
+    "grade": "8.8/10.9",
+    "dims": {
+     "shank_d": 36,
+     "s": 55,
+     "e": 63.51,
+     "k": 22.5,
+     "m": 31,
+     "washer_thickness": 5,
+     "std_hole": 39
+    }
+   }
+  ]
+ },
+ "Metric hex head bolt (ISO 4014/4017) with hex nut (ISO 4032) and plain washer (ISO 7089); structural assembly per EN 1090-2": {
+  "family": "Metric structural hex bolt/nut per EN 14399-3(HR)/-4(HV) with ISO 7089 washer (EN 1090-2)",
+  "units": "mm",
+  "source": "Primary: ISO 4014/4017 (hex bolt s/e/k), ISO 4032 (nut thickness m, max), ISO 7089 (200 HV plain washer thickness), EN 1090-2 Table 11 (nominal clearance, normal round hole). Second independent cross-check: fasteners.eu (ISO 4014 hex bolt & ISO 4032 nut tables), amesweb.info metric hex nut chart, and engineeringhardware.com ISO 4014 hex bolt table. All s/e/k/m/washer/hole values verified against the second source; bolt-head e (across corners) confirmed as ISO 4014 values (M20 33.53, M24 39.98), distinct from the smaller ISO 4032 nut e-min (32.95/39.55). No corrections required. | across-flats corrected to EN 14399 structural (s: M20=32 confirmed vs drawing; e=s*2/√3).",
+  "items": [
+   {
+    "size": "M12",
+    "grade": "8.8/10.9",
+    "dims": {
+     "shank_d": 12,
+     "s": 22,
+     "e": 25.4,
+     "k": 7.5,
+     "m": 10.8,
+     "washer_thickness": 2.5,
+     "std_hole": 13
+    }
+   },
+   {
+    "size": "M16",
+    "grade": "8.8/10.9",
+    "dims": {
+     "shank_d": 16,
+     "s": 27,
+     "e": 31.18,
+     "k": 10,
+     "m": 14.8,
+     "washer_thickness": 3,
+     "std_hole": 18
+    }
+   },
+   {
+    "size": "M20",
+    "grade": "8.8/10.9",
+    "dims": {
+     "shank_d": 20,
+     "s": 32,
+     "e": 36.95,
+     "k": 12.5,
+     "m": 18,
+     "washer_thickness": 3,
+     "std_hole": 22
+    }
+   },
+   {
+    "size": "M24",
+    "grade": "8.8/10.9",
+    "dims": {
+     "shank_d": 24,
+     "s": 41,
+     "e": 47.34,
+     "k": 15,
+     "m": 21.5,
+     "washer_thickness": 4,
+     "std_hole": 26
+    }
+   },
+   {
+    "size": "M27",
+    "grade": "8.8/10.9",
+    "dims": {
+     "shank_d": 27,
+     "s": 46,
+     "e": 53.12,
+     "k": 17,
+     "m": 23.8,
+     "washer_thickness": 4,
+     "std_hole": 30
+    }
+   },
+   {
+    "size": "M30",
+    "grade": "8.8/10.9",
+    "dims": {
+     "shank_d": 30,
+     "s": 50,
+     "e": 57.74,
+     "k": 18.7,
+     "m": 25.6,
+     "washer_thickness": 4,
+     "std_hole": 33
+    }
+   },
+   {
+    "size": "M36",
+    "grade": "8.8/10.9",
+    "dims": {
+     "shank_d": 36,
+     "s": 60,
+     "e": 69.28,
+     "k": 22.5,
+     "m": 31,
+     "washer_thickness": 5,
+     "std_hole": 39
+    }
+   }
+  ]
+ },
+ "ASTM F3125 (A325/A490) Heavy Hex Structural Bolt, ASME B18.2.6": {
+  "family": "ASTM F3125 (A325/A490) Heavy Hex Structural Bolt, ASME B18.2.6",
+  "units": "mm",
+  "source": "Original values from ASME B18.2.6 (heavy hex structural bolts) with heavy hex nut thickness per ASME B18.2.2, and std_hole per AISC Steel Construction Manual Table J3.3 (d+1/16 in for d<=7/8 in, d+1/8 in for d>=1 in); nominal inch values converted at 25.4 mm/in. Independently cross-checked against Atlanta Rod & Manufacturing heavy hex bolt and heavy hex nut dimension charts (atlrod.com) and the Birmingham Fastener F3125 A325/A490 heavy hex dimension chart (bhamfast.com). All values confirmed; the 7/8 in width across flats is 1-7/16 in (36.513 mm) per Atlanta Rod and the 1.5d+1/8 heavy-hex rule (Birmingham Fastener's 1-9/16 in was a source error and was not adopted).",
+  "items": [
+   {
+    "size": "1/2\"",
+    "grade": "A325/A490",
+    "dims": {
+     "shank_d": 12.7,
+     "head_across_flats(s)": 22.225,
+     "head_across_corners(e)": 25.654,
+     "head_height(k)": 7.938,
+     "nut_thickness(m)": 12.304,
+     "std_hole": 14.288
+    }
+   },
+   {
+    "size": "5/8\"",
+    "grade": "A325/A490",
+    "dims": {
+     "shank_d": 15.875,
+     "head_across_flats(s)": 26.988,
+     "head_across_corners(e)": 31.166,
+     "head_height(k)": 9.921,
+     "nut_thickness(m)": 15.479,
+     "std_hole": 17.463
+    }
+   },
+   {
+    "size": "3/4\"",
+    "grade": "A325/A490",
+    "dims": {
+     "shank_d": 19.05,
+     "head_across_flats(s)": 31.75,
+     "head_across_corners(e)": 36.652,
+     "head_height(k)": 11.908,
+     "nut_thickness(m)": 18.654,
+     "std_hole": 20.638
+    }
+   },
+   {
+    "size": "7/8\"",
+    "grade": "A325/A490",
+    "dims": {
+     "shank_d": 22.225,
+     "head_across_flats(s)": 36.513,
+     "head_across_corners(e)": 42.164,
+     "head_height(k)": 13.891,
+     "nut_thickness(m)": 21.829,
+     "std_hole": 23.813
+    }
+   },
+   {
+    "size": "1\"",
+    "grade": "A325/A490",
+    "dims": {
+     "shank_d": 25.4,
+     "head_across_flats(s)": 41.275,
+     "head_across_corners(e)": 47.65,
+     "head_height(k)": 15.479,
+     "nut_thickness(m)": 25.004,
+     "std_hole": 28.575
+    }
+   },
+   {
+    "size": "1-1/8\"",
+    "grade": "A325/A490",
+    "dims": {
+     "shank_d": 28.575,
+     "head_across_flats(s)": 46.038,
+     "head_across_corners(e)": 53.162,
+     "head_height(k)": 17.463,
+     "nut_thickness(m)": 28.179,
+     "std_hole": 31.75
+    }
+   },
+   {
+    "size": "1-1/4\"",
+    "grade": "A325/A490",
+    "dims": {
+     "shank_d": 31.75,
+     "head_across_flats(s)": 50.8,
+     "head_across_corners(e)": 58.649,
+     "head_height(k)": 19.845,
+     "nut_thickness(m)": 30.958,
+     "std_hole": 34.925
+    }
+   }
+  ]
+ }
+}

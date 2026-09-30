@@ -1,0 +1,51 @@
+{
+  "name": "member-vectors-standalone",
+  "private": true,
+  "license": "MIT",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Standalone, offline, browser-only Member Vectors tool — extracts steel joint geometry (vectors, node, offsets, rotation, sections) from an IFC for IDEA StatiCa.",
+  "scripts": {
+    "dev": "vite",
+    "dev:combined": "tsx watch --exclude \"vite.config.mts.timestamp-*\" dev-server.mts",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@thatopen/components": "~3.2.7",
+    "@thatopen/components-front": "~3.2.17",
+    "@thatopen/fragments": "~3.2.13",
+    "camera-controls": "2.9.0",
+    "classnames": "^2.3.2",
+    "react": "^18",
+    "react-dom": "^18",
+    "recharts": "^3.10.1",
+    "three": "^0.177.0",
+    "web-ifc": "0.0.72",
+    "xlsx": "^0.18.5"
+  },
+  "devDependencies": {
+    "@headlessui/tailwindcss": "^0.2.0",
+    "@tailwindcss/typography": "^0.5.10",
+    "@types/connect-livereload": "^0.6.3",
+    "@types/express": "^5.0.6",
+    "@types/livereload": "^0.9.5",
+    "@types/multer": "^1.4.13",
+    "@types/node": "^26.1.1",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "@types/three": "^0.177.0",
+    "@vitejs/plugin-react": "^4.7.0",
+    "autoprefixer": "^10.4.16",
+    "connect-livereload": "^0.6.1",
+    "express": "^5.2.1",
+    "livereload": "^0.10.3",
+    "multer": "^2.2.0",
+    "postcss": "^8.4.31",
+    "tailwindcss": "^3.3.3",
+    "tsx": "^4.23.1",
+    "typescript": "^5",
+    "vite": "^5.4.21"
+  },
+  "allowScripts": {}
+}

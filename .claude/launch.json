@@ -1,0 +1,30 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "dev (two tabs)",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev"],
+      "port": 5177
+    },
+    {
+      "name": "drawgen only",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev:drawgen"],
+      "port": 5177
+    },
+    {
+      "name": "viewer only",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev:viewer"],
+      "port": 5173
+    },
+    {
+      "name": "dev (side port 5178)",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev"],
+      "port": 5178,
+      "env": { "PORT": "5178", "LIVERELOAD_PORT": "35730" }
+    }
+  ]
+}

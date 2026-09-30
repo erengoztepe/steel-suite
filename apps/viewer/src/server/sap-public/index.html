@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Null Facade</title>
+<!-- Same look as the IOM+IFC -> DXF page (apps/drawgen/src/web/public/index.html). -->
+<style>
+  body { font-family: system-ui, sans-serif; max-width: 640px; margin: 4rem auto; color: #222; }
+  h1 { font-size: 1.3rem; }
+  #drop {
+    border: 2px dashed #888; border-radius: 8px; padding: 3rem 1rem;
+    text-align: center; color: #555; cursor: pointer; transition: background .15s, border-color .15s;
+  }
+  #drop.over { background: #eef6ff; border-color: #2b7de9; }
+  #files { margin-top: 1rem; font-size: .9rem; }
+  .field { margin-top: 1rem; }
+  .field > label { display: block; font-size: .85rem; color: #555; margin-bottom: .3rem; }
+  .field input[type=text] { width: 100%; box-sizing: border-box; padding: .5rem; font-size: .9rem; font-family: inherit; }
+  .opt { display: flex; gap: .5rem; align-items: flex-start; padding: .35rem 0; font-size: .9rem; }
+  .opt input { margin-top: .25rem; }
+  .hint { display: block; color: #666; font-size: .8rem; }
+  .btnrow { margin-top: 1rem; display: flex; gap: .6rem; }
+  button { padding: .6rem 1.4rem; font-size: 1rem; cursor: pointer; }
+  button:disabled { opacity: .5; cursor: not-allowed; }
+  #status { margin-top: 1rem; font-size: .9rem; white-space: pre-wrap; }
+  #status.error { color: #b00020; }
+  input[type=file] { display: none; }
+  #wip {
+    margin: 0 0 1.5rem; padding: .8rem 1rem; border: 1px solid #e0b252; border-left-width: 5px;
+    border-radius: 6px; background: #fff8e6; color: #5c4400; font-size: .9rem; line-height: 1.45;
+  }
+  #wip strong { display: block; margin-bottom: .2rem; font-size: .95rem; }
+  #preview { display: none; margin-top: 1rem; width: 100%; border: 1px solid #ddd; border-radius: 6px; }
+  h2 { font-size: 1.1rem; margin-top: 0; }
+  section + section { margin-top: 2.5rem; padding-top: 2rem; border-top: 1px solid #ddd; }
+  #models { font-size: .9rem; }
+  #models .empty { color: #666; }
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0 1.2rem; }
+  .field input[type=number], .field select { width: 100%; box-sizing: border-box; padding: .45rem; font-size: .9rem; font-family: inherit; }
+  .checks { display: flex; flex-wrap: wrap; gap: 0 1.2rem; }
+  #xstatus { margin-top: 1rem; font-size: .9rem; white-space: pre-wrap; }
+  #xstatus.error { color: #b00020; }
+  @media (max-width: 560px) { .grid { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+  <h1>SAP2000 null facade</h1>
+
+  <section>
+  <h2>1. Structure IFC from the viewer</h2>
+  <p>One IFC with the structural analysis model of every file loaded in the Member Vectors tab:
+    beams, columns and members become frames through their section centroid, joined at shared
+    nodes. In SAP2000: <em>File &gt; Import &gt; IFC</em>.</p>
+  <div class="field">
+    <label>Models in the viewer</label>
+    <div id="models"><span class="empty">Loading…</span></div>
+  </div>
+  <div class="field">
+    <label>Elements</label>
+    <div class="checks">
+      <label class="opt"><input type="checkbox" name="cls" value="beam" checked /> Beams</label>
+      <label class="opt"><input type="checkbox" name="cls" value="column" checked /> Columns</label>
+      <label class="opt"><input type="checkbox" name="cls" value="member" checked /> Members (braces, diagrid)</label>
+    </div>
+  </div>
+  <div class="grid">
+    <div class="field">
+      <label for="mergeTol">Node merge tolerance (mm)</label>
+      <input id="mergeTol" type="number" min="0" step="1" value="10" />
+      <span class="hint">Member ends closer than this become one node.</span>
+    </div>
+    <div class="field">
+      <label for="connectTol">Connect member ends within (mm)</label>
+      <input id="connectTol" type="number" min="0" step="10" value="300" />
+      <span class="hint">A loose end this close to another member is moved onto it and that
+        member is split there. Use the largest end offset in the model (e.g. half a column depth); 0 = off.</span>
+    </div>
+    <div class="field">
+      <label for="supports">Supports</label>
+      <select id="supports">
+        <option value="pinned" selected>Pinned</option>
+        <option value="fixed">Fixed</option>
+        <option value="none">None</option>
+      </select>
+    </div>
+    <div class="field">
+      <label for="supportAt">Support nodes</label>
+      <select id="supportAt">
+        <option value="lowest" selected>Lowest level</option>
+        <option value="column-bases">Column bases</option>
+      </select>
+      <span class="hint">Column bases: the bottom end of every column that nothing continues below.</span>
+    </div>
+    <div class="field" id="supportTolField">
+      <label for="supportTol">Lowest level band (mm)</label>
+      <input id="supportTol" type="number" min="0" step="1" value="10" />
+      <span class="hint">Nodes up to this far above the lowest node get a support.</span>
+    </div>
+    <div class="field">
+      <label for="grade">Steel grade</label>
+      <select id="grade">
+        <option>S235</option><option>S275</option><option selected>S355</option><option>S460</option>
+      </select>
+    </div>
+  </div>
+  <label class="opt"><input id="splitCrossings" type="checkbox" />
+    <span><strong>Split members where they cross</strong>
+      <span class="hint">Adds a node where two members intersect without a joint (e.g. X bracing).
+        Off: crossing members stay unconnected.</span>
+    </span>
+  </label>
+  <div class="btnrow">
+    <button id="xgo" disabled>Export structure IFC</button>
+    <button id="xdl" disabled>Download</button>
+  </div>
+  <div id="xstatus"></div>
+  </section>
+
+  <section>
+  <h2>2. Null facade on the SAP2000 model</h2>
+  <div id="wip" role="note">
+    <strong>Uses the open SAP2000 window</strong>
+    SAP2000 runs one instance per licence, so the file is processed in the SAP2000 window on this
+    PC: its current model is closed <em>without saving</em> and reopened from disk afterwards.
+    Save your work in SAP2000 first. Analysis results in the uploaded file are discarded.
+  </div>
+  <p>Drop a SAP2000 <code>.sdb</code> frame model. The gaps between frames on the outer facade are
+    filled with null area objects (section <code>None</code>): triangular panels stay whole,
+    quadrilateral panels are split into two triangles. Openings with five or more sides stay open.</p>
+
+  <div id="drop">
+    Drop the .sdb file here, or click to pick it
+    <input id="picker" type="file" accept=".sdb" />
+  </div>
+  <div id="files"></div>
+  <div class="field">
+    <label>Panels</label>
+    <label class="opt">
+      <input type="radio" name="scope" value="facade" checked />
+      <span><strong>Outer facade</strong>
+        <span class="hint">Only panels seen from outside. Panels inside trusses and behind the
+        envelope (cross frames, inner chord faces) are left empty.</span>
+      </span>
+    </label>
+    <label class="opt">
+      <input type="radio" name="scope" value="all" />
+      <span><strong>Every gap</strong>
+        <span class="hint">Every triangular and quadrilateral frame panel, truss interiors included.</span>
+      </span>
+    </label>
+  </div>
+  <div class="btnrow">
+    <button id="go" disabled>Cover facade</button>
+    <button id="dl" disabled>Download</button>
+  </div>
+  <div id="status"></div>
+  <img id="preview" alt="Covered panels (pink) over the frame model (blue)" />
+  </section>
+
+<script>
+  const drop = document.getElementById('drop');
+  const picker = document.getElementById('picker');
+  const filesEl = document.getElementById('files');
+  const go = document.getElementById('go');
+  const dl = document.getElementById('dl');
+  const status = document.getElementById('status');
+  const preview = document.getElementById('preview');
+  let selected = null;
+  let downloadUrl = null;
+
+  const scope = () => document.querySelector('input[name=scope]:checked').value;
+
+  function setFile(fileList) {
+    const f = Array.from(fileList).find(x => /\.sdb$/i.test(x.name));
+    selected = f || null;
+    downloadUrl = null;
+    dl.disabled = true;
+    preview.style.display = 'none';
+    filesEl.textContent = f ? `📄 ${f.name} (${(f.size / 1024).toFixed(1)} KB)` : 'Pick a .sdb file.';
+    go.disabled = !f;
+  }
+
+  drop.addEventListener('click', () => picker.click());
+  picker.addEventListener('change', () => setFile(picker.files));
+  ['dragover', 'dragenter'].forEach(ev => drop.addEventListener(ev, e => {
+    e.preventDefault(); drop.classList.add('over');
+  }));
+  ['dragleave', 'drop'].forEach(ev => drop.addEventListener(ev, e => {
+    e.preventDefault(); drop.classList.remove('over');
+  }));
+  drop.addEventListener('drop', e => setFile(e.dataTransfer.files));
+
+  go.addEventListener('click', async () => {
+    go.disabled = true;
+    dl.disabled = true;
+    downloadUrl = null;
+    preview.style.display = 'none';
+    status.className = '';
+    status.textContent = 'Working in SAP2000…';
+    const form = new FormData();
+    form.append('allGaps', String(scope() === 'all'));
+    form.append('file', selected);
+    try {
+      const resp = await fetch('/api/sap/facade', { method: 'POST', body: form });
+      const r = await resp.json().catch(() => ({ error: resp.statusText }));
+      if (!resp.ok || r.error) {
+        status.className = 'error';
+        status.textContent = r.error || 'Error';
+        return;
+      }
+      downloadUrl = r.download;
+      dl.disabled = false;
+      const notes = [];
+      if (r.alreadyPresent) notes.push(`${r.alreadyPresent} panels already had areas.`);
+      if (r.failed) notes.push(`${r.failed} areas could not be added.`);
+      if (r.nonManifoldFrames) notes.push(`${r.nonManifoldFrames} frames border more than two panels (surfaces meet there).`);
+      if (r.unlocked) notes.push('The model was locked; its analysis results were dropped.');
+      status.textContent =
+        `Ready: ${r.added} areas added (section ${r.section}, group ${r.group})\n` +
+        `${r.triangles} triangular + ${r.quads} quadrilateral panels, ${r.frames} frames, ${r.joints} joints` +
+        (notes.length ? '\n' + notes.join('\n') : '');
+      preview.src = r.preview;
+      preview.style.display = 'block';
+    } catch (e) {
+      status.className = 'error';
+      status.textContent = String(e);
+    } finally {
+      go.disabled = false;
+    }
+  });
+
+  dl.addEventListener('click', () => {
+    if (downloadUrl) window.location.href = downloadUrl;
+  });
+</script>
+<script>
+  // ---- 1. structure IFC: the viewer (parent frame, same origin) publishes its loaded
+  // models as window.__steelSuiteIfcSources (StandaloneApp.tsx).
+  const modelsEl = document.getElementById('models');
+  const xgo = document.getElementById('xgo');
+  const xdl = document.getElementById('xdl');
+  const xstatus = document.getElementById('xstatus');
+  const supportAt = document.getElementById('supportAt');
+  const supportTolField = document.getElementById('supportTolField');
+  let xdownload = null;
+  let modelKey = '';
+  const unchecked = new Set();   // modelIds the user un-ticked
+
+  function viewerSources() {
+    try {
+      const get = window.parent && window.parent.__steelSuiteIfcSources;
+      return typeof get === 'function' ? get() : null;
+    } catch { return null; }
+  }
+
+  function renderModels() {
+    const sources = viewerSources();
+    const key = sources ? sources.map(s => s.modelId + (s.hidden ? '~' : '')).join('|') : 'none';
+    if (key === modelKey) return;
+    modelKey = key;
+    if (!sources) {
+      modelsEl.innerHTML = '<span class="empty">The viewer is not available - open this page from the combined dev server.</span>';
+    } else if (!sources.length) {
+      modelsEl.innerHTML = '<span class="empty">No model loaded. Load an IFC in the Member Vectors tab.</span>';
+    } else {
+      modelsEl.innerHTML = '';
+      for (const s of sources) {
+        const row = document.createElement('label');
+        row.className = 'opt';
+        const cb = document.createElement('input');
+        cb.type = 'checkbox';
+        cb.checked = !unchecked.has(s.modelId);
+        cb.addEventListener('change', () => {
+          if (cb.checked) unchecked.delete(s.modelId); else unchecked.add(s.modelId);
+          updateButton();
+        });
+        const text = document.createElement('span');
+        text.textContent = `📐 ${s.fileName} (${(s.buffer.byteLength / 1048576).toFixed(1)} MB)` +
+          (s.isBase ? ' - base' : '') + (s.hidden ? ' - hidden in the viewer' : '');
+        row.append(cb, text);
+        modelsEl.append(row);
+      }
+    }
+    updateButton();
+  }
+
+  function chosen() {
+    return (viewerSources() || []).filter(s => !unchecked.has(s.modelId));
+  }
+  function updateButton() {
+    const anyClass = document.querySelectorAll('input[name=cls]:checked').length > 0;
+    xgo.disabled = !(chosen().length && anyClass);
+  }
+  document.querySelectorAll('input[name=cls]').forEach(c => c.addEventListener('change', updateButton));
+  supportAt.addEventListener('change', () => {
+    supportTolField.style.display = supportAt.value === 'lowest' ? '' : 'none';
+  });
+  // The tab stays mounted while the user loads / removes files next door: keep the list live.
+  renderModels();
+  setInterval(renderModels, 1500);
+
+  xgo.addEventListener('click', async () => {
+    const sources = chosen();
+    if (!sources.length) return;
+    xgo.disabled = true;
+    xdl.disabled = true;
+    xdownload = null;
+    xstatus.className = '';
+    xstatus.textContent = 'Building the structure model…';
+    const form = new FormData();
+    const val = id => document.getElementById(id).value;
+    form.append('classes', [...document.querySelectorAll('input[name=cls]:checked')].map(c => c.value).join(','));
+    form.append('mergeTol', val('mergeTol'));
+    form.append('connectTol', val('connectTol'));
+    form.append('supports', val('supports'));
+    form.append('supportAt', val('supportAt'));
+    form.append('supportTol', val('supportTol'));
+    form.append('grade', val('grade'));
+    form.append('splitCrossings', String(document.getElementById('splitCrossings').checked));
+    for (const s of sources) form.append('files', new Blob([s.buffer]), s.fileName);
+    try {
+      const resp = await fetch('/api/sap/structure-ifc', { method: 'POST', body: form });
+      const r = await resp.json().catch(() => ({ error: resp.statusText }));
+      if (!resp.ok || r.error) {
+        xstatus.className = 'error';
+        xstatus.textContent = r.error || 'Error';
+        return;
+      }
+      xdownload = r.download;
+      xdl.disabled = false;
+      const lines = [
+        `Ready: ${r.members} frames, ${r.nodes} nodes, ${r.supports} supports, ${r.sections} sections` +
+          ` (from ${r.elements} elements in ${r.files} file${r.files > 1 ? 's' : ''})`,
+      ];
+      if (r.snappedEnds || r.splits) lines.push(`${r.snappedEnds} ends moved onto members, ${r.splits} members split.`);
+      if (r.freeEnds) lines.push(`${r.freeEnds} free ends (nodes with a single frame) - raise "Connect member ends within" if they should be connected.`);
+      if (r.duplicates) lines.push(`${r.duplicates} elements appeared in more than one file and were taken once.`);
+      if (r.skipped) lines.push(`${r.skipped} elements skipped (no usable geometry).`);
+      for (const w of r.warnings || []) lines.push('⚠ ' + w);
+      xstatus.textContent = lines.join('\n');
+    } catch (e) {
+      xstatus.className = 'error';
+      xstatus.textContent = String(e);
+    } finally {
+      updateButton();
+    }
+  });
+  xdl.addEventListener('click', () => {
+    if (xdownload) window.location.href = xdownload;
+  });
+</script>
+</body>
+</html>

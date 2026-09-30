@@ -1,0 +1,1 @@
+cd C:\Users\XXXX\Desktop\steel-suite; winget install -e --id OpenJS.NodeJS.LTS --accept-source-agreements --accept-package-agreements; npm install; pip install -e .

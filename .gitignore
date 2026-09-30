@@ -1,0 +1,65 @@
+# --- node ---
+node_modules/
+dist/
+
+# --- python ---
+__pycache__/
+*.pyc
+*.egg-info/
+.pytest_cache/
+build/
+.venv/
+venv/
+
+# --- generated ---
+# DXF/PNG the drawing tool writes when no output folder is chosen
+output/*.dxf
+output/*.png
+# per-request scratch dirs (uploads + intermediate spec/dxf/png)
+apps/drawgen/tmp/
+# Null Facade tab: uploaded + produced .sdb scratch dirs
+apps/viewer/tmp/
+# DrawingSpec dumps from `npm run build:spec`
+apps/drawgen/out/
+# Vite writes then deletes this while loading its config; tsx watch must not chase it
+# (it restart-loops otherwise — hence the --exclude in apps/viewer's dev:combined)
+vite.config.mts.timestamp-*
+
+# --- local data ---
+# Connection Library: one JSON per IFC, written by the dev server (see
+# apps/viewer/connection-library-server.mts). Local working data, not source.
+.data/
+
+# --- misc ---
+.DS_Store
+*.log
+.env
+.env.local
+
+# --- local-only data: never commit project / office material ---
+# connection fixtures (IOM .xml + same-named .ifc) and their golden snapshots
+fixtures/
+tests/golden/
+iom+ifc/
+samples/
+# viewer models (default.ifc is loaded on first launch if present)
+apps/viewer/public/models/*.ifc
+# ...except the SYNTHETIC mock connection (tools/make_mock_connection.py regenerates it)
+!apps/viewer/public/models/mock_connection.ifc
+# your own office house style (copy server/style_profiles/default.json to start one)
+server/style_profiles/local.json
+# research material kept on disk only
+docs/local/
+# third-party dumps / caches
+MprlData.json
+swagger*.json
+source/standalone/.vite/
+.vite/
+# stale prebuilt viewer bundle -- regenerate with `npm run build:viewer`
+published/
+# SAP2000 writes these next to an imported model (Null Facade / gridshell sample)
+apps/viewer/public/models/*.sdb
+apps/viewer/public/models/*.$2k
+apps/viewer/public/models/*.OUT
+apps/viewer/public/models/*.ico
+apps/viewer/public/models/*.sbk

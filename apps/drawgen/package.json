@@ -1,0 +1,26 @@
+{
+  "name": "idea-drawgen",
+  "version": "0.0.1",
+  "private": true,
+  "license": "MIT",
+  "type": "module",
+  "description": "IDEA StatiCa (IOM/IFC) -> AutoCAD connection detail drawing generator",
+  "scripts": {
+    "verify": "tsx src/ingest/verify.ts",
+    "build:spec": "tsx src/drawing/build.ts",
+    "web": "tsx watch src/web/server.ts"
+  },
+  "dependencies": {
+    "express": "^5.2.1",
+    "fast-xml-parser": "^4.5.0",
+    "multer": "^2.2.0",
+    "polygon-clipping": "^0.15.7"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "connect-livereload": "^0.6.1",
+    "livereload": "^0.10.3",
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0"
+  }
+}

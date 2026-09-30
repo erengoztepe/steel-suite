@@ -1,0 +1,4128 @@
+{
+ "European IPE (EN 10365) and IPN (DIN 1025-1) hot-rolled I-sections": {
+  "family": "European IPE (EN 10365) and IPN (DIN 1025-1) hot-rolled I-sections",
+  "units": "mm",
+  "source": "Cross-checked against wermac.org (IPE/IPN h, b, tw, tf per NEN-EN 10025) and montanstahl.com (IPN root radius r1); IPE root radius r additionally confirmed via mesteel.com. All values agree with the original EN 10365 / DIN 1025-1 reference.",
+  "items": [
+   {
+    "designation": "IPE80",
+    "dims": {
+     "h": 80,
+     "b": 46,
+     "tw": 3.8,
+     "tf": 5.2,
+     "r": 5
+    }
+   },
+   {
+    "designation": "IPE100",
+    "dims": {
+     "h": 100,
+     "b": 55,
+     "tw": 4.1,
+     "tf": 5.7,
+     "r": 7
+    }
+   },
+   {
+    "designation": "IPE120",
+    "dims": {
+     "h": 120,
+     "b": 64,
+     "tw": 4.4,
+     "tf": 6.3,
+     "r": 7
+    }
+   },
+   {
+    "designation": "IPE140",
+    "dims": {
+     "h": 140,
+     "b": 73,
+     "tw": 4.7,
+     "tf": 6.9,
+     "r": 7
+    }
+   },
+   {
+    "designation": "IPE160",
+    "dims": {
+     "h": 160,
+     "b": 82,
+     "tw": 5,
+     "tf": 7.4,
+     "r": 9
+    }
+   },
+   {
+    "designation": "IPE180",
+    "dims": {
+     "h": 180,
+     "b": 91,
+     "tw": 5.3,
+     "tf": 8,
+     "r": 9
+    }
+   },
+   {
+    "designation": "IPE200",
+    "dims": {
+     "h": 200,
+     "b": 100,
+     "tw": 5.6,
+     "tf": 8.5,
+     "r": 12
+    }
+   },
+   {
+    "designation": "IPE220",
+    "dims": {
+     "h": 220,
+     "b": 110,
+     "tw": 5.9,
+     "tf": 9.2,
+     "r": 12
+    }
+   },
+   {
+    "designation": "IPE240",
+    "dims": {
+     "h": 240,
+     "b": 120,
+     "tw": 6.2,
+     "tf": 9.8,
+     "r": 15
+    }
+   },
+   {
+    "designation": "IPE270",
+    "dims": {
+     "h": 270,
+     "b": 135,
+     "tw": 6.6,
+     "tf": 10.2,
+     "r": 15
+    }
+   },
+   {
+    "designation": "IPE300",
+    "dims": {
+     "h": 300,
+     "b": 150,
+     "tw": 7.1,
+     "tf": 10.7,
+     "r": 15
+    }
+   },
+   {
+    "designation": "IPE330",
+    "dims": {
+     "h": 330,
+     "b": 160,
+     "tw": 7.5,
+     "tf": 11.5,
+     "r": 18
+    }
+   },
+   {
+    "designation": "IPE360",
+    "dims": {
+     "h": 360,
+     "b": 170,
+     "tw": 8,
+     "tf": 12.7,
+     "r": 18
+    }
+   },
+   {
+    "designation": "IPE400",
+    "dims": {
+     "h": 400,
+     "b": 180,
+     "tw": 8.6,
+     "tf": 13.5,
+     "r": 21
+    }
+   },
+   {
+    "designation": "IPE450",
+    "dims": {
+     "h": 450,
+     "b": 190,
+     "tw": 9.4,
+     "tf": 14.6,
+     "r": 21
+    }
+   },
+   {
+    "designation": "IPE500",
+    "dims": {
+     "h": 500,
+     "b": 200,
+     "tw": 10.2,
+     "tf": 16,
+     "r": 21
+    }
+   },
+   {
+    "designation": "IPE550",
+    "dims": {
+     "h": 550,
+     "b": 210,
+     "tw": 11.1,
+     "tf": 17.2,
+     "r": 24
+    }
+   },
+   {
+    "designation": "IPE600",
+    "dims": {
+     "h": 600,
+     "b": 220,
+     "tw": 12,
+     "tf": 19,
+     "r": 24
+    }
+   },
+   {
+    "designation": "IPN80",
+    "dims": {
+     "h": 80,
+     "b": 42,
+     "tw": 3.9,
+     "tf": 5.9,
+     "r": 3.9
+    }
+   },
+   {
+    "designation": "IPN100",
+    "dims": {
+     "h": 100,
+     "b": 50,
+     "tw": 4.5,
+     "tf": 6.8,
+     "r": 4.5
+    }
+   },
+   {
+    "designation": "IPN120",
+    "dims": {
+     "h": 120,
+     "b": 58,
+     "tw": 5.1,
+     "tf": 7.7,
+     "r": 5.1
+    }
+   },
+   {
+    "designation": "IPN140",
+    "dims": {
+     "h": 140,
+     "b": 66,
+     "tw": 5.7,
+     "tf": 8.6,
+     "r": 5.7
+    }
+   },
+   {
+    "designation": "IPN160",
+    "dims": {
+     "h": 160,
+     "b": 74,
+     "tw": 6.3,
+     "tf": 9.5,
+     "r": 6.3
+    }
+   },
+   {
+    "designation": "IPN180",
+    "dims": {
+     "h": 180,
+     "b": 82,
+     "tw": 6.9,
+     "tf": 10.4,
+     "r": 6.9
+    }
+   },
+   {
+    "designation": "IPN200",
+    "dims": {
+     "h": 200,
+     "b": 90,
+     "tw": 7.5,
+     "tf": 11.3,
+     "r": 7.5
+    }
+   },
+   {
+    "designation": "IPN220",
+    "dims": {
+     "h": 220,
+     "b": 98,
+     "tw": 8.1,
+     "tf": 12.2,
+     "r": 8.1
+    }
+   },
+   {
+    "designation": "IPN240",
+    "dims": {
+     "h": 240,
+     "b": 106,
+     "tw": 8.7,
+     "tf": 13.1,
+     "r": 8.7
+    }
+   },
+   {
+    "designation": "IPN260",
+    "dims": {
+     "h": 260,
+     "b": 113,
+     "tw": 9.4,
+     "tf": 14.1,
+     "r": 9.4
+    }
+   },
+   {
+    "designation": "IPN280",
+    "dims": {
+     "h": 280,
+     "b": 119,
+     "tw": 10.1,
+     "tf": 15.2,
+     "r": 10.1
+    }
+   },
+   {
+    "designation": "IPN300",
+    "dims": {
+     "h": 300,
+     "b": 125,
+     "tw": 10.8,
+     "tf": 16.2,
+     "r": 10.8
+    }
+   },
+   {
+    "designation": "IPN320",
+    "dims": {
+     "h": 320,
+     "b": 131,
+     "tw": 11.5,
+     "tf": 17.3,
+     "r": 11.5
+    }
+   },
+   {
+    "designation": "IPN340",
+    "dims": {
+     "h": 340,
+     "b": 137,
+     "tw": 12.2,
+     "tf": 18.3,
+     "r": 12.2
+    }
+   },
+   {
+    "designation": "IPN360",
+    "dims": {
+     "h": 360,
+     "b": 143,
+     "tw": 13,
+     "tf": 19.5,
+     "r": 13
+    }
+   },
+   {
+    "designation": "IPN380",
+    "dims": {
+     "h": 380,
+     "b": 149,
+     "tw": 13.7,
+     "tf": 20.5,
+     "r": 13.7
+    }
+   },
+   {
+    "designation": "IPN400",
+    "dims": {
+     "h": 400,
+     "b": 155,
+     "tw": 14.4,
+     "tf": 21.6,
+     "r": 14.4
+    }
+   }
+  ]
+ },
+ "HEA/HEB/HEM (EN 10365 European wide-flange H-sections; HE_A/HE_B/HE_M). Designation carries the series; e.g. HEA550 == HE550A.": {
+  "family": "HEA/HEB/HEM (EN 10365 European wide-flange H-sections; HE_A/HE_B/HE_M). Designation carries the series; e.g. HEA550 == HE550A.",
+  "units": "mm",
+  "source": "Primary: EN 10365:2017 (Hot rolled steel channels, I and H sections — Dimensions and masses); values identical to ArcelorMittal European Sections catalogue and former DIN 1025-2/-3/-4. Second independent cross-check: wermac.org steel dimension tables (dim_hea/dim_heb/dim_hem, per Euronorm 53-62 / EN 10025), confirmed against structolution.com (HEM 280). All h/b/tw/tf verified matching across both sources; root radii per standard EN/DIN grouping.",
+  "items": [
+   {
+    "designation": "HEA100",
+    "dims": {
+     "h": 96,
+     "b": 100,
+     "tw": 5,
+     "tf": 8,
+     "r": 12
+    }
+   },
+   {
+    "designation": "HEA120",
+    "dims": {
+     "h": 114,
+     "b": 120,
+     "tw": 5,
+     "tf": 8,
+     "r": 12
+    }
+   },
+   {
+    "designation": "HEA140",
+    "dims": {
+     "h": 133,
+     "b": 140,
+     "tw": 5.5,
+     "tf": 8.5,
+     "r": 12
+    }
+   },
+   {
+    "designation": "HEA160",
+    "dims": {
+     "h": 152,
+     "b": 160,
+     "tw": 6,
+     "tf": 9,
+     "r": 15
+    }
+   },
+   {
+    "designation": "HEA180",
+    "dims": {
+     "h": 171,
+     "b": 180,
+     "tw": 6,
+     "tf": 9.5,
+     "r": 15
+    }
+   },
+   {
+    "designation": "HEA200",
+    "dims": {
+     "h": 190,
+     "b": 200,
+     "tw": 6.5,
+     "tf": 10,
+     "r": 18
+    }
+   },
+   {
+    "designation": "HEA220",
+    "dims": {
+     "h": 210,
+     "b": 220,
+     "tw": 7,
+     "tf": 11,
+     "r": 18
+    }
+   },
+   {
+    "designation": "HEA240",
+    "dims": {
+     "h": 230,
+     "b": 240,
+     "tw": 7.5,
+     "tf": 12,
+     "r": 21
+    }
+   },
+   {
+    "designation": "HEA260",
+    "dims": {
+     "h": 250,
+     "b": 260,
+     "tw": 7.5,
+     "tf": 12.5,
+     "r": 24
+    }
+   },
+   {
+    "designation": "HEA280",
+    "dims": {
+     "h": 270,
+     "b": 280,
+     "tw": 8,
+     "tf": 13,
+     "r": 24
+    }
+   },
+   {
+    "designation": "HEA300",
+    "dims": {
+     "h": 290,
+     "b": 300,
+     "tw": 8.5,
+     "tf": 14,
+     "r": 27
+    }
+   },
+   {
+    "designation": "HEA320",
+    "dims": {
+     "h": 310,
+     "b": 300,
+     "tw": 9,
+     "tf": 15.5,
+     "r": 27
+    }
+   },
+   {
+    "designation": "HEA340",
+    "dims": {
+     "h": 330,
+     "b": 300,
+     "tw": 9.5,
+     "tf": 16.5,
+     "r": 27
+    }
+   },
+   {
+    "designation": "HEA360",
+    "dims": {
+     "h": 350,
+     "b": 300,
+     "tw": 10,
+     "tf": 17.5,
+     "r": 27
+    }
+   },
+   {
+    "designation": "HEA400",
+    "dims": {
+     "h": 390,
+     "b": 300,
+     "tw": 11,
+     "tf": 19,
+     "r": 27
+    }
+   },
+   {
+    "designation": "HEA450",
+    "dims": {
+     "h": 440,
+     "b": 300,
+     "tw": 11.5,
+     "tf": 21,
+     "r": 27
+    }
+   },
+   {
+    "designation": "HEA500",
+    "dims": {
+     "h": 490,
+     "b": 300,
+     "tw": 12,
+     "tf": 23,
+     "r": 27
+    }
+   },
+   {
+    "designation": "HEA550",
+    "dims": {
+     "h": 540,
+     "b": 300,
+     "tw": 12.5,
+     "tf": 24,
+     "r": 27
+    }
+   },
+   {
+    "designation": "HEA600",
+    "dims": {
+     "h": 590,
+     "b": 300,
+     "tw": 13,
+     "tf": 25,
+     "r": 27
+    }
+   },
+   {
+    "designation": "HEA650",
+    "dims": {
+     "h": 640,
+     "b": 300,
+     "tw": 13.5,
+     "tf": 26,
+     "r": 27
+    }
+   },
+   {
+    "designation": "HEA700",
+    "dims": {
+     "h": 690,
+     "b": 300,
+     "tw": 14.5,
+     "tf": 27,
+     "r": 27
+    }
+   },
+   {
+    "designation": "HEA800",
+    "dims": {
+     "h": 790,
+     "b": 300,
+     "tw": 15,
+     "tf": 28,
+     "r": 30
+    }
+   },
+   {
+    "designation": "HEA900",
+    "dims": {
+     "h": 890,
+     "b": 300,
+     "tw": 16,
+     "tf": 30,
+     "r": 30
+    }
+   },
+   {
+    "designation": "HEA1000",
+    "dims": {
+     "h": 990,
+     "b": 300,
+     "tw": 16.5,
+     "tf": 31,
+     "r": 30
+    }
+   },
+   {
+    "designation": "HEB100",
+    "dims": {
+     "h": 100,
+     "b": 100,
+     "tw": 6,
+     "tf": 10,
+     "r": 12
+    }
+   },
+   {
+    "designation": "HEB120",
+    "dims": {
+     "h": 120,
+     "b": 120,
+     "tw": 6.5,
+     "tf": 11,
+     "r": 12
+    }
+   },
+   {
+    "designation": "HEB140",
+    "dims": {
+     "h": 140,
+     "b": 140,
+     "tw": 7,
+     "tf": 12,
+     "r": 12
+    }
+   },
+   {
+    "designation": "HEB160",
+    "dims": {
+     "h": 160,
+     "b": 160,
+     "tw": 8,
+     "tf": 13,
+     "r": 15
+    }
+   },
+   {
+    "designation": "HEB180",
+    "dims": {
+     "h": 180,
+     "b": 180,
+     "tw": 8.5,
+     "tf": 14,
+     "r": 15
+    }
+   },
+   {
+    "designation": "HEB200",
+    "dims": {
+     "h": 200,
+     "b": 200,
+     "tw": 9,
+     "tf": 15,
+     "r": 18
+    }
+   },
+   {
+    "designation": "HEB220",
+    "dims": {
+     "h": 220,
+     "b": 220,
+     "tw": 9.5,
+     "tf": 16,
+     "r": 18
+    }
+   },
+   {
+    "designation": "HEB240",
+    "dims": {
+     "h": 240,
+     "b": 240,
+     "tw": 10,
+     "tf": 17,
+     "r": 21
+    }
+   },
+   {
+    "designation": "HEB260",
+    "dims": {
+     "h": 260,
+     "b": 260,
+     "tw": 10,
+     "tf": 17.5,
+     "r": 24
+    }
+   },
+   {
+    "designation": "HEB280",
+    "dims": {
+     "h": 280,
+     "b": 280,
+     "tw": 10.5,
+     "tf": 18,
+     "r": 24
+    }
+   },
+   {
+    "designation": "HEB300",
+    "dims": {
+     "h": 300,
+     "b": 300,
+     "tw": 11,
+     "tf": 19,
+     "r": 27
+    }
+   },
+   {
+    "designation": "HEB320",
+    "dims": {
+     "h": 320,
+     "b": 300,
+     "tw": 11.5,
+     "tf": 20.5,
+     "r": 27
+    }
+   },
+   {
+    "designation": "HEB340",
+    "dims": {
+     "h": 340,
+     "b": 300,
+     "tw": 12,
+     "tf": 21.5,
+     "r": 27
+    }
+   },
+   {
+    "designation": "HEB360",
+    "dims": {
+     "h": 360,
+     "b": 300,
+     "tw": 12.5,
+     "tf": 22.5,
+     "r": 27
+    }
+   },
+   {
+    "designation": "HEB400",
+    "dims": {
+     "h": 400,
+     "b": 300,
+     "tw": 13.5,
+     "tf": 24,
+     "r": 27
+    }
+   },
+   {
+    "designation": "HEB450",
+    "dims": {
+     "h": 450,
+     "b": 300,
+     "tw": 14,
+     "tf": 26,
+     "r": 27
+    }
+   },
+   {
+    "designation": "HEB500",
+    "dims": {
+     "h": 500,
+     "b": 300,
+     "tw": 14.5,
+     "tf": 28,
+     "r": 27
+    }
+   },
+   {
+    "designation": "HEB550",
+    "dims": {
+     "h": 550,
+     "b": 300,
+     "tw": 15,
+     "tf": 29,
+     "r": 27
+    }
+   },
+   {
+    "designation": "HEB600",
+    "dims": {
+     "h": 600,
+     "b": 300,
+     "tw": 15.5,
+     "tf": 30,
+     "r": 27
+    }
+   },
+   {
+    "designation": "HEB650",
+    "dims": {
+     "h": 650,
+     "b": 300,
+     "tw": 16,
+     "tf": 31,
+     "r": 27
+    }
+   },
+   {
+    "designation": "HEB700",
+    "dims": {
+     "h": 700,
+     "b": 300,
+     "tw": 17,
+     "tf": 32,
+     "r": 27
+    }
+   },
+   {
+    "designation": "HEB800",
+    "dims": {
+     "h": 800,
+     "b": 300,
+     "tw": 17.5,
+     "tf": 33,
+     "r": 30
+    }
+   },
+   {
+    "designation": "HEB900",
+    "dims": {
+     "h": 900,
+     "b": 300,
+     "tw": 18.5,
+     "tf": 35,
+     "r": 30
+    }
+   },
+   {
+    "designation": "HEB1000",
+    "dims": {
+     "h": 1000,
+     "b": 300,
+     "tw": 19,
+     "tf": 36,
+     "r": 30
+    }
+   },
+   {
+    "designation": "HEM100",
+    "dims": {
+     "h": 120,
+     "b": 106,
+     "tw": 12,
+     "tf": 20,
+     "r": 12
+    }
+   },
+   {
+    "designation": "HEM120",
+    "dims": {
+     "h": 140,
+     "b": 126,
+     "tw": 12.5,
+     "tf": 21,
+     "r": 12
+    }
+   },
+   {
+    "designation": "HEM140",
+    "dims": {
+     "h": 160,
+     "b": 146,
+     "tw": 13,
+     "tf": 22,
+     "r": 12
+    }
+   },
+   {
+    "designation": "HEM160",
+    "dims": {
+     "h": 180,
+     "b": 166,
+     "tw": 14,
+     "tf": 23,
+     "r": 15
+    }
+   },
+   {
+    "designation": "HEM180",
+    "dims": {
+     "h": 200,
+     "b": 186,
+     "tw": 14.5,
+     "tf": 24,
+     "r": 15
+    }
+   },
+   {
+    "designation": "HEM200",
+    "dims": {
+     "h": 220,
+     "b": 206,
+     "tw": 15,
+     "tf": 25,
+     "r": 18
+    }
+   },
+   {
+    "designation": "HEM220",
+    "dims": {
+     "h": 240,
+     "b": 226,
+     "tw": 15.5,
+     "tf": 26,
+     "r": 18
+    }
+   },
+   {
+    "designation": "HEM240",
+    "dims": {
+     "h": 270,
+     "b": 248,
+     "tw": 18,
+     "tf": 32,
+     "r": 21
+    }
+   },
+   {
+    "designation": "HEM260",
+    "dims": {
+     "h": 290,
+     "b": 268,
+     "tw": 18,
+     "tf": 32.5,
+     "r": 24
+    }
+   },
+   {
+    "designation": "HEM280",
+    "dims": {
+     "h": 310,
+     "b": 288,
+     "tw": 18.5,
+     "tf": 33,
+     "r": 24
+    }
+   },
+   {
+    "designation": "HEM300",
+    "dims": {
+     "h": 340,
+     "b": 310,
+     "tw": 21,
+     "tf": 39,
+     "r": 27
+    }
+   },
+   {
+    "designation": "HEM320",
+    "dims": {
+     "h": 359,
+     "b": 309,
+     "tw": 21,
+     "tf": 40,
+     "r": 27
+    }
+   },
+   {
+    "designation": "HEM340",
+    "dims": {
+     "h": 377,
+     "b": 309,
+     "tw": 21,
+     "tf": 40,
+     "r": 27
+    }
+   },
+   {
+    "designation": "HEM360",
+    "dims": {
+     "h": 395,
+     "b": 308,
+     "tw": 21,
+     "tf": 40,
+     "r": 27
+    }
+   },
+   {
+    "designation": "HEM400",
+    "dims": {
+     "h": 432,
+     "b": 307,
+     "tw": 21,
+     "tf": 40,
+     "r": 27
+    }
+   },
+   {
+    "designation": "HEM450",
+    "dims": {
+     "h": 478,
+     "b": 307,
+     "tw": 21,
+     "tf": 40,
+     "r": 27
+    }
+   },
+   {
+    "designation": "HEM500",
+    "dims": {
+     "h": 524,
+     "b": 306,
+     "tw": 21,
+     "tf": 40,
+     "r": 27
+    }
+   },
+   {
+    "designation": "HEM550",
+    "dims": {
+     "h": 572,
+     "b": 306,
+     "tw": 21,
+     "tf": 40,
+     "r": 27
+    }
+   },
+   {
+    "designation": "HEM600",
+    "dims": {
+     "h": 620,
+     "b": 305,
+     "tw": 21,
+     "tf": 40,
+     "r": 27
+    }
+   },
+   {
+    "designation": "HEM650",
+    "dims": {
+     "h": 668,
+     "b": 305,
+     "tw": 21,
+     "tf": 40,
+     "r": 27
+    }
+   },
+   {
+    "designation": "HEM700",
+    "dims": {
+     "h": 716,
+     "b": 304,
+     "tw": 21,
+     "tf": 40,
+     "r": 27
+    }
+   },
+   {
+    "designation": "HEM800",
+    "dims": {
+     "h": 814,
+     "b": 303,
+     "tw": 21,
+     "tf": 40,
+     "r": 30
+    }
+   },
+   {
+    "designation": "HEM900",
+    "dims": {
+     "h": 910,
+     "b": 302,
+     "tw": 21,
+     "tf": 40,
+     "r": 30
+    }
+   },
+   {
+    "designation": "HEM1000",
+    "dims": {
+     "h": 1008,
+     "b": 302,
+     "tw": 21,
+     "tf": 40,
+     "r": 30
+    }
+   }
+  ]
+ },
+ "CHS": {
+  "family": "CHS",
+  "units": "mm",
+  "source": "Cross-checked against EN 10210-2 CHS dimension tables from eurocodeapplied.com (Eurocode EN 1993 CHS design properties) and the Tata Steel/SCI Blue Book hot-finished CHS table via cad-steel.co.uk (BS EN 10210), with corroboration from amesweb.info. Removed non-standard combinations 60.3x6.3, 76.1x6.3 and 88.9x8.0 (thicknesses exceed the max standard wall for those diameters); all outer diameters and remaining thicknesses verified correct.",
+  "items": [
+   {
+    "designation": "CHS48.3x3.2",
+    "dims": {
+     "D": 48.3,
+     "t": 3.2
+    }
+   },
+   {
+    "designation": "CHS48.3x4.0",
+    "dims": {
+     "D": 48.3,
+     "t": 4
+    }
+   },
+   {
+    "designation": "CHS48.3x5.0",
+    "dims": {
+     "D": 48.3,
+     "t": 5
+    }
+   },
+   {
+    "designation": "CHS60.3x3.2",
+    "dims": {
+     "D": 60.3,
+     "t": 3.2
+    }
+   },
+   {
+    "designation": "CHS60.3x4.0",
+    "dims": {
+     "D": 60.3,
+     "t": 4
+    }
+   },
+   {
+    "designation": "CHS60.3x5.0",
+    "dims": {
+     "D": 60.3,
+     "t": 5
+    }
+   },
+   {
+    "designation": "CHS76.1x3.2",
+    "dims": {
+     "D": 76.1,
+     "t": 3.2
+    }
+   },
+   {
+    "designation": "CHS76.1x4.0",
+    "dims": {
+     "D": 76.1,
+     "t": 4
+    }
+   },
+   {
+    "designation": "CHS76.1x5.0",
+    "dims": {
+     "D": 76.1,
+     "t": 5
+    }
+   },
+   {
+    "designation": "CHS88.9x3.2",
+    "dims": {
+     "D": 88.9,
+     "t": 3.2
+    }
+   },
+   {
+    "designation": "CHS88.9x4.0",
+    "dims": {
+     "D": 88.9,
+     "t": 4
+    }
+   },
+   {
+    "designation": "CHS88.9x5.0",
+    "dims": {
+     "D": 88.9,
+     "t": 5
+    }
+   },
+   {
+    "designation": "CHS88.9x6.3",
+    "dims": {
+     "D": 88.9,
+     "t": 6.3
+    }
+   },
+   {
+    "designation": "CHS114.3x3.6",
+    "dims": {
+     "D": 114.3,
+     "t": 3.6
+    }
+   },
+   {
+    "designation": "CHS114.3x4.0",
+    "dims": {
+     "D": 114.3,
+     "t": 4
+    }
+   },
+   {
+    "designation": "CHS114.3x5.0",
+    "dims": {
+     "D": 114.3,
+     "t": 5
+    }
+   },
+   {
+    "designation": "CHS114.3x6.3",
+    "dims": {
+     "D": 114.3,
+     "t": 6.3
+    }
+   },
+   {
+    "designation": "CHS114.3x8.0",
+    "dims": {
+     "D": 114.3,
+     "t": 8
+    }
+   },
+   {
+    "designation": "CHS114.3x10.0",
+    "dims": {
+     "D": 114.3,
+     "t": 10
+    }
+   },
+   {
+    "designation": "CHS139.7x4.0",
+    "dims": {
+     "D": 139.7,
+     "t": 4
+    }
+   },
+   {
+    "designation": "CHS139.7x5.0",
+    "dims": {
+     "D": 139.7,
+     "t": 5
+    }
+   },
+   {
+    "designation": "CHS139.7x6.3",
+    "dims": {
+     "D": 139.7,
+     "t": 6.3
+    }
+   },
+   {
+    "designation": "CHS139.7x8.0",
+    "dims": {
+     "D": 139.7,
+     "t": 8
+    }
+   },
+   {
+    "designation": "CHS139.7x10.0",
+    "dims": {
+     "D": 139.7,
+     "t": 10
+    }
+   },
+   {
+    "designation": "CHS139.7x12.5",
+    "dims": {
+     "D": 139.7,
+     "t": 12.5
+    }
+   },
+   {
+    "designation": "CHS168.3x4.0",
+    "dims": {
+     "D": 168.3,
+     "t": 4
+    }
+   },
+   {
+    "designation": "CHS168.3x5.0",
+    "dims": {
+     "D": 168.3,
+     "t": 5
+    }
+   },
+   {
+    "designation": "CHS168.3x6.3",
+    "dims": {
+     "D": 168.3,
+     "t": 6.3
+    }
+   },
+   {
+    "designation": "CHS168.3x8.0",
+    "dims": {
+     "D": 168.3,
+     "t": 8
+    }
+   },
+   {
+    "designation": "CHS168.3x10.0",
+    "dims": {
+     "D": 168.3,
+     "t": 10
+    }
+   },
+   {
+    "designation": "CHS168.3x12.5",
+    "dims": {
+     "D": 168.3,
+     "t": 12.5
+    }
+   },
+   {
+    "designation": "CHS219.1x5.0",
+    "dims": {
+     "D": 219.1,
+     "t": 5
+    }
+   },
+   {
+    "designation": "CHS219.1x6.3",
+    "dims": {
+     "D": 219.1,
+     "t": 6.3
+    }
+   },
+   {
+    "designation": "CHS219.1x8.0",
+    "dims": {
+     "D": 219.1,
+     "t": 8
+    }
+   },
+   {
+    "designation": "CHS219.1x10.0",
+    "dims": {
+     "D": 219.1,
+     "t": 10
+    }
+   },
+   {
+    "designation": "CHS219.1x12.5",
+    "dims": {
+     "D": 219.1,
+     "t": 12.5
+    }
+   },
+   {
+    "designation": "CHS219.1x16.0",
+    "dims": {
+     "D": 219.1,
+     "t": 16
+    }
+   },
+   {
+    "designation": "CHS219.1x20.0",
+    "dims": {
+     "D": 219.1,
+     "t": 20
+    }
+   },
+   {
+    "designation": "CHS244.5x6.3",
+    "dims": {
+     "D": 244.5,
+     "t": 6.3
+    }
+   },
+   {
+    "designation": "CHS244.5x8.0",
+    "dims": {
+     "D": 244.5,
+     "t": 8
+    }
+   },
+   {
+    "designation": "CHS244.5x10.0",
+    "dims": {
+     "D": 244.5,
+     "t": 10
+    }
+   },
+   {
+    "designation": "CHS244.5x12.5",
+    "dims": {
+     "D": 244.5,
+     "t": 12.5
+    }
+   },
+   {
+    "designation": "CHS244.5x16.0",
+    "dims": {
+     "D": 244.5,
+     "t": 16
+    }
+   },
+   {
+    "designation": "CHS244.5x20.0",
+    "dims": {
+     "D": 244.5,
+     "t": 20
+    }
+   },
+   {
+    "designation": "CHS323.9x6.3",
+    "dims": {
+     "D": 323.9,
+     "t": 6.3
+    }
+   },
+   {
+    "designation": "CHS323.9x8.0",
+    "dims": {
+     "D": 323.9,
+     "t": 8
+    }
+   },
+   {
+    "designation": "CHS323.9x10.0",
+    "dims": {
+     "D": 323.9,
+     "t": 10
+    }
+   },
+   {
+    "designation": "CHS323.9x12.5",
+    "dims": {
+     "D": 323.9,
+     "t": 12.5
+    }
+   },
+   {
+    "designation": "CHS323.9x16.0",
+    "dims": {
+     "D": 323.9,
+     "t": 16
+    }
+   },
+   {
+    "designation": "CHS323.9x20.0",
+    "dims": {
+     "D": 323.9,
+     "t": 20
+    }
+   },
+   {
+    "designation": "CHS355.6x8.0",
+    "dims": {
+     "D": 355.6,
+     "t": 8
+    }
+   },
+   {
+    "designation": "CHS355.6x10.0",
+    "dims": {
+     "D": 355.6,
+     "t": 10
+    }
+   },
+   {
+    "designation": "CHS355.6x12.5",
+    "dims": {
+     "D": 355.6,
+     "t": 12.5
+    }
+   },
+   {
+    "designation": "CHS355.6x16.0",
+    "dims": {
+     "D": 355.6,
+     "t": 16
+    }
+   },
+   {
+    "designation": "CHS355.6x20.0",
+    "dims": {
+     "D": 355.6,
+     "t": 20
+    }
+   },
+   {
+    "designation": "CHS406.4x8.0",
+    "dims": {
+     "D": 406.4,
+     "t": 8
+    }
+   },
+   {
+    "designation": "CHS406.4x10.0",
+    "dims": {
+     "D": 406.4,
+     "t": 10
+    }
+   },
+   {
+    "designation": "CHS406.4x12.5",
+    "dims": {
+     "D": 406.4,
+     "t": 12.5
+    }
+   },
+   {
+    "designation": "CHS406.4x16.0",
+    "dims": {
+     "D": 406.4,
+     "t": 16
+    }
+   },
+   {
+    "designation": "CHS406.4x20.0",
+    "dims": {
+     "D": 406.4,
+     "t": 20
+    }
+   }
+  ]
+ },
+ "Rectangular & Square Hollow Sections (RHS/SHS)": {
+  "family": "Rectangular & Square Hollow Sections (RHS/SHS)",
+  "units": "mm",
+  "source": "Primary: EN 10219-2 (cold formed) / EN 10210-2 (hot finished) nominal dimensions. Cross-checked against eurocodeapplied.com EN 1993 SHS/RHS design-property tables and Dlubal EN 10210-2 / EN 10219-2 cross-section database. Outer corner radius ro per EN 10219-2: 2.0t for t<=6, 2.5t for 6<t<=10, 3.0t for t>10 (hot-finished EN 10210 uses ~1.5t over the same D/B/t range). All designations, h/b/t values and ro values verified correct; no bogus entries found.",
+  "items": [
+   {
+    "designation": "SHS40x40x3",
+    "dims": {
+     "h": 40,
+     "b": 40,
+     "t": 3,
+     "ro": 6
+    }
+   },
+   {
+    "designation": "SHS40x40x4",
+    "dims": {
+     "h": 40,
+     "b": 40,
+     "t": 4,
+     "ro": 8
+    }
+   },
+   {
+    "designation": "SHS50x50x3",
+    "dims": {
+     "h": 50,
+     "b": 50,
+     "t": 3,
+     "ro": 6
+    }
+   },
+   {
+    "designation": "SHS50x50x4",
+    "dims": {
+     "h": 50,
+     "b": 50,
+     "t": 4,
+     "ro": 8
+    }
+   },
+   {
+    "designation": "SHS50x50x5",
+    "dims": {
+     "h": 50,
+     "b": 50,
+     "t": 5,
+     "ro": 10
+    }
+   },
+   {
+    "designation": "SHS60x60x3",
+    "dims": {
+     "h": 60,
+     "b": 60,
+     "t": 3,
+     "ro": 6
+    }
+   },
+   {
+    "designation": "SHS60x60x4",
+    "dims": {
+     "h": 60,
+     "b": 60,
+     "t": 4,
+     "ro": 8
+    }
+   },
+   {
+    "designation": "SHS60x60x5",
+    "dims": {
+     "h": 60,
+     "b": 60,
+     "t": 5,
+     "ro": 10
+    }
+   },
+   {
+    "designation": "SHS60x60x6",
+    "dims": {
+     "h": 60,
+     "b": 60,
+     "t": 6,
+     "ro": 12
+    }
+   },
+   {
+    "designation": "SHS70x70x4",
+    "dims": {
+     "h": 70,
+     "b": 70,
+     "t": 4,
+     "ro": 8
+    }
+   },
+   {
+    "designation": "SHS70x70x5",
+    "dims": {
+     "h": 70,
+     "b": 70,
+     "t": 5,
+     "ro": 10
+    }
+   },
+   {
+    "designation": "SHS70x70x6",
+    "dims": {
+     "h": 70,
+     "b": 70,
+     "t": 6,
+     "ro": 12
+    }
+   },
+   {
+    "designation": "SHS80x80x4",
+    "dims": {
+     "h": 80,
+     "b": 80,
+     "t": 4,
+     "ro": 8
+    }
+   },
+   {
+    "designation": "SHS80x80x5",
+    "dims": {
+     "h": 80,
+     "b": 80,
+     "t": 5,
+     "ro": 10
+    }
+   },
+   {
+    "designation": "SHS80x80x6",
+    "dims": {
+     "h": 80,
+     "b": 80,
+     "t": 6,
+     "ro": 12
+    }
+   },
+   {
+    "designation": "SHS80x80x8",
+    "dims": {
+     "h": 80,
+     "b": 80,
+     "t": 8,
+     "ro": 20
+    }
+   },
+   {
+    "designation": "SHS90x90x5",
+    "dims": {
+     "h": 90,
+     "b": 90,
+     "t": 5,
+     "ro": 10
+    }
+   },
+   {
+    "designation": "SHS90x90x6",
+    "dims": {
+     "h": 90,
+     "b": 90,
+     "t": 6,
+     "ro": 12
+    }
+   },
+   {
+    "designation": "SHS90x90x8",
+    "dims": {
+     "h": 90,
+     "b": 90,
+     "t": 8,
+     "ro": 20
+    }
+   },
+   {
+    "designation": "SHS100x100x4",
+    "dims": {
+     "h": 100,
+     "b": 100,
+     "t": 4,
+     "ro": 8
+    }
+   },
+   {
+    "designation": "SHS100x100x5",
+    "dims": {
+     "h": 100,
+     "b": 100,
+     "t": 5,
+     "ro": 10
+    }
+   },
+   {
+    "designation": "SHS100x100x6",
+    "dims": {
+     "h": 100,
+     "b": 100,
+     "t": 6,
+     "ro": 12
+    }
+   },
+   {
+    "designation": "SHS100x100x8",
+    "dims": {
+     "h": 100,
+     "b": 100,
+     "t": 8,
+     "ro": 20
+    }
+   },
+   {
+    "designation": "SHS100x100x10",
+    "dims": {
+     "h": 100,
+     "b": 100,
+     "t": 10,
+     "ro": 25
+    }
+   },
+   {
+    "designation": "SHS120x120x5",
+    "dims": {
+     "h": 120,
+     "b": 120,
+     "t": 5,
+     "ro": 10
+    }
+   },
+   {
+    "designation": "SHS120x120x6",
+    "dims": {
+     "h": 120,
+     "b": 120,
+     "t": 6,
+     "ro": 12
+    }
+   },
+   {
+    "designation": "SHS120x120x8",
+    "dims": {
+     "h": 120,
+     "b": 120,
+     "t": 8,
+     "ro": 20
+    }
+   },
+   {
+    "designation": "SHS120x120x10",
+    "dims": {
+     "h": 120,
+     "b": 120,
+     "t": 10,
+     "ro": 25
+    }
+   },
+   {
+    "designation": "SHS120x120x12.5",
+    "dims": {
+     "h": 120,
+     "b": 120,
+     "t": 12.5,
+     "ro": 37.5
+    }
+   },
+   {
+    "designation": "SHS140x140x5",
+    "dims": {
+     "h": 140,
+     "b": 140,
+     "t": 5,
+     "ro": 10
+    }
+   },
+   {
+    "designation": "SHS140x140x6",
+    "dims": {
+     "h": 140,
+     "b": 140,
+     "t": 6,
+     "ro": 12
+    }
+   },
+   {
+    "designation": "SHS140x140x8",
+    "dims": {
+     "h": 140,
+     "b": 140,
+     "t": 8,
+     "ro": 20
+    }
+   },
+   {
+    "designation": "SHS140x140x10",
+    "dims": {
+     "h": 140,
+     "b": 140,
+     "t": 10,
+     "ro": 25
+    }
+   },
+   {
+    "designation": "SHS140x140x12.5",
+    "dims": {
+     "h": 140,
+     "b": 140,
+     "t": 12.5,
+     "ro": 37.5
+    }
+   },
+   {
+    "designation": "SHS150x150x5",
+    "dims": {
+     "h": 150,
+     "b": 150,
+     "t": 5,
+     "ro": 10
+    }
+   },
+   {
+    "designation": "SHS150x150x6",
+    "dims": {
+     "h": 150,
+     "b": 150,
+     "t": 6,
+     "ro": 12
+    }
+   },
+   {
+    "designation": "SHS150x150x8",
+    "dims": {
+     "h": 150,
+     "b": 150,
+     "t": 8,
+     "ro": 20
+    }
+   },
+   {
+    "designation": "SHS150x150x10",
+    "dims": {
+     "h": 150,
+     "b": 150,
+     "t": 10,
+     "ro": 25
+    }
+   },
+   {
+    "designation": "SHS150x150x12.5",
+    "dims": {
+     "h": 150,
+     "b": 150,
+     "t": 12.5,
+     "ro": 37.5
+    }
+   },
+   {
+    "designation": "SHS160x160x6",
+    "dims": {
+     "h": 160,
+     "b": 160,
+     "t": 6,
+     "ro": 12
+    }
+   },
+   {
+    "designation": "SHS160x160x8",
+    "dims": {
+     "h": 160,
+     "b": 160,
+     "t": 8,
+     "ro": 20
+    }
+   },
+   {
+    "designation": "SHS160x160x10",
+    "dims": {
+     "h": 160,
+     "b": 160,
+     "t": 10,
+     "ro": 25
+    }
+   },
+   {
+    "designation": "SHS180x180x8",
+    "dims": {
+     "h": 180,
+     "b": 180,
+     "t": 8,
+     "ro": 20
+    }
+   },
+   {
+    "designation": "SHS180x180x10",
+    "dims": {
+     "h": 180,
+     "b": 180,
+     "t": 10,
+     "ro": 25
+    }
+   },
+   {
+    "designation": "SHS180x180x12.5",
+    "dims": {
+     "h": 180,
+     "b": 180,
+     "t": 12.5,
+     "ro": 37.5
+    }
+   },
+   {
+    "designation": "SHS200x200x6",
+    "dims": {
+     "h": 200,
+     "b": 200,
+     "t": 6,
+     "ro": 12
+    }
+   },
+   {
+    "designation": "SHS200x200x8",
+    "dims": {
+     "h": 200,
+     "b": 200,
+     "t": 8,
+     "ro": 20
+    }
+   },
+   {
+    "designation": "SHS200x200x10",
+    "dims": {
+     "h": 200,
+     "b": 200,
+     "t": 10,
+     "ro": 25
+    }
+   },
+   {
+    "designation": "SHS200x200x12.5",
+    "dims": {
+     "h": 200,
+     "b": 200,
+     "t": 12.5,
+     "ro": 37.5
+    }
+   },
+   {
+    "designation": "SHS200x200x16",
+    "dims": {
+     "h": 200,
+     "b": 200,
+     "t": 16,
+     "ro": 48
+    }
+   },
+   {
+    "designation": "SHS250x250x8",
+    "dims": {
+     "h": 250,
+     "b": 250,
+     "t": 8,
+     "ro": 20
+    }
+   },
+   {
+    "designation": "SHS250x250x10",
+    "dims": {
+     "h": 250,
+     "b": 250,
+     "t": 10,
+     "ro": 25
+    }
+   },
+   {
+    "designation": "SHS250x250x12.5",
+    "dims": {
+     "h": 250,
+     "b": 250,
+     "t": 12.5,
+     "ro": 37.5
+    }
+   },
+   {
+    "designation": "SHS250x250x16",
+    "dims": {
+     "h": 250,
+     "b": 250,
+     "t": 16,
+     "ro": 48
+    }
+   },
+   {
+    "designation": "SHS300x300x10",
+    "dims": {
+     "h": 300,
+     "b": 300,
+     "t": 10,
+     "ro": 25
+    }
+   },
+   {
+    "designation": "SHS300x300x12.5",
+    "dims": {
+     "h": 300,
+     "b": 300,
+     "t": 12.5,
+     "ro": 37.5
+    }
+   },
+   {
+    "designation": "SHS300x300x16",
+    "dims": {
+     "h": 300,
+     "b": 300,
+     "t": 16,
+     "ro": 48
+    }
+   },
+   {
+    "designation": "SHS350x350x10",
+    "dims": {
+     "h": 350,
+     "b": 350,
+     "t": 10,
+     "ro": 25
+    }
+   },
+   {
+    "designation": "SHS350x350x12.5",
+    "dims": {
+     "h": 350,
+     "b": 350,
+     "t": 12.5,
+     "ro": 37.5
+    }
+   },
+   {
+    "designation": "SHS400x400x12.5",
+    "dims": {
+     "h": 400,
+     "b": 400,
+     "t": 12.5,
+     "ro": 37.5
+    }
+   },
+   {
+    "designation": "SHS400x400x16",
+    "dims": {
+     "h": 400,
+     "b": 400,
+     "t": 16,
+     "ro": 48
+    }
+   },
+   {
+    "designation": "RHS50x30x3",
+    "dims": {
+     "h": 50,
+     "b": 30,
+     "t": 3,
+     "ro": 6
+    }
+   },
+   {
+    "designation": "RHS60x40x3",
+    "dims": {
+     "h": 60,
+     "b": 40,
+     "t": 3,
+     "ro": 6
+    }
+   },
+   {
+    "designation": "RHS60x40x4",
+    "dims": {
+     "h": 60,
+     "b": 40,
+     "t": 4,
+     "ro": 8
+    }
+   },
+   {
+    "designation": "RHS60x40x5",
+    "dims": {
+     "h": 60,
+     "b": 40,
+     "t": 5,
+     "ro": 10
+    }
+   },
+   {
+    "designation": "RHS80x40x3",
+    "dims": {
+     "h": 80,
+     "b": 40,
+     "t": 3,
+     "ro": 6
+    }
+   },
+   {
+    "designation": "RHS80x40x4",
+    "dims": {
+     "h": 80,
+     "b": 40,
+     "t": 4,
+     "ro": 8
+    }
+   },
+   {
+    "designation": "RHS80x40x5",
+    "dims": {
+     "h": 80,
+     "b": 40,
+     "t": 5,
+     "ro": 10
+    }
+   },
+   {
+    "designation": "RHS90x50x3",
+    "dims": {
+     "h": 90,
+     "b": 50,
+     "t": 3,
+     "ro": 6
+    }
+   },
+   {
+    "designation": "RHS90x50x5",
+    "dims": {
+     "h": 90,
+     "b": 50,
+     "t": 5,
+     "ro": 10
+    }
+   },
+   {
+    "designation": "RHS100x50x3",
+    "dims": {
+     "h": 100,
+     "b": 50,
+     "t": 3,
+     "ro": 6
+    }
+   },
+   {
+    "designation": "RHS100x50x4",
+    "dims": {
+     "h": 100,
+     "b": 50,
+     "t": 4,
+     "ro": 8
+    }
+   },
+   {
+    "designation": "RHS100x50x5",
+    "dims": {
+     "h": 100,
+     "b": 50,
+     "t": 5,
+     "ro": 10
+    }
+   },
+   {
+    "designation": "RHS100x50x6",
+    "dims": {
+     "h": 100,
+     "b": 50,
+     "t": 6,
+     "ro": 12
+    }
+   },
+   {
+    "designation": "RHS100x60x4",
+    "dims": {
+     "h": 100,
+     "b": 60,
+     "t": 4,
+     "ro": 8
+    }
+   },
+   {
+    "designation": "RHS100x60x5",
+    "dims": {
+     "h": 100,
+     "b": 60,
+     "t": 5,
+     "ro": 10
+    }
+   },
+   {
+    "designation": "RHS100x60x6",
+    "dims": {
+     "h": 100,
+     "b": 60,
+     "t": 6,
+     "ro": 12
+    }
+   },
+   {
+    "designation": "RHS120x60x4",
+    "dims": {
+     "h": 120,
+     "b": 60,
+     "t": 4,
+     "ro": 8
+    }
+   },
+   {
+    "designation": "RHS120x60x5",
+    "dims": {
+     "h": 120,
+     "b": 60,
+     "t": 5,
+     "ro": 10
+    }
+   },
+   {
+    "designation": "RHS120x60x6",
+    "dims": {
+     "h": 120,
+     "b": 60,
+     "t": 6,
+     "ro": 12
+    }
+   },
+   {
+    "designation": "RHS120x80x5",
+    "dims": {
+     "h": 120,
+     "b": 80,
+     "t": 5,
+     "ro": 10
+    }
+   },
+   {
+    "designation": "RHS120x80x6",
+    "dims": {
+     "h": 120,
+     "b": 80,
+     "t": 6,
+     "ro": 12
+    }
+   },
+   {
+    "designation": "RHS120x80x8",
+    "dims": {
+     "h": 120,
+     "b": 80,
+     "t": 8,
+     "ro": 20
+    }
+   },
+   {
+    "designation": "RHS140x80x5",
+    "dims": {
+     "h": 140,
+     "b": 80,
+     "t": 5,
+     "ro": 10
+    }
+   },
+   {
+    "designation": "RHS140x80x6",
+    "dims": {
+     "h": 140,
+     "b": 80,
+     "t": 6,
+     "ro": 12
+    }
+   },
+   {
+    "designation": "RHS140x80x8",
+    "dims": {
+     "h": 140,
+     "b": 80,
+     "t": 8,
+     "ro": 20
+    }
+   },
+   {
+    "designation": "RHS150x100x5",
+    "dims": {
+     "h": 150,
+     "b": 100,
+     "t": 5,
+     "ro": 10
+    }
+   },
+   {
+    "designation": "RHS150x100x6",
+    "dims": {
+     "h": 150,
+     "b": 100,
+     "t": 6,
+     "ro": 12
+    }
+   },
+   {
+    "designation": "RHS150x100x8",
+    "dims": {
+     "h": 150,
+     "b": 100,
+     "t": 8,
+     "ro": 20
+    }
+   },
+   {
+    "designation": "RHS150x100x10",
+    "dims": {
+     "h": 150,
+     "b": 100,
+     "t": 10,
+     "ro": 25
+    }
+   },
+   {
+    "designation": "RHS160x80x5",
+    "dims": {
+     "h": 160,
+     "b": 80,
+     "t": 5,
+     "ro": 10
+    }
+   },
+   {
+    "designation": "RHS160x80x6",
+    "dims": {
+     "h": 160,
+     "b": 80,
+     "t": 6,
+     "ro": 12
+    }
+   },
+   {
+    "designation": "RHS160x80x8",
+    "dims": {
+     "h": 160,
+     "b": 80,
+     "t": 8,
+     "ro": 20
+    }
+   },
+   {
+    "designation": "RHS200x100x5",
+    "dims": {
+     "h": 200,
+     "b": 100,
+     "t": 5,
+     "ro": 10
+    }
+   },
+   {
+    "designation": "RHS200x100x6",
+    "dims": {
+     "h": 200,
+     "b": 100,
+     "t": 6,
+     "ro": 12
+    }
+   },
+   {
+    "designation": "RHS200x100x8",
+    "dims": {
+     "h": 200,
+     "b": 100,
+     "t": 8,
+     "ro": 20
+    }
+   },
+   {
+    "designation": "RHS200x100x10",
+    "dims": {
+     "h": 200,
+     "b": 100,
+     "t": 10,
+     "ro": 25
+    }
+   },
+   {
+    "designation": "RHS200x120x6",
+    "dims": {
+     "h": 200,
+     "b": 120,
+     "t": 6,
+     "ro": 12
+    }
+   },
+   {
+    "designation": "RHS200x120x8",
+    "dims": {
+     "h": 200,
+     "b": 120,
+     "t": 8,
+     "ro": 20
+    }
+   },
+   {
+    "designation": "RHS200x120x10",
+    "dims": {
+     "h": 200,
+     "b": 120,
+     "t": 10,
+     "ro": 25
+    }
+   },
+   {
+    "designation": "RHS250x150x6",
+    "dims": {
+     "h": 250,
+     "b": 150,
+     "t": 6,
+     "ro": 12
+    }
+   },
+   {
+    "designation": "RHS250x150x8",
+    "dims": {
+     "h": 250,
+     "b": 150,
+     "t": 8,
+     "ro": 20
+    }
+   },
+   {
+    "designation": "RHS250x150x10",
+    "dims": {
+     "h": 250,
+     "b": 150,
+     "t": 10,
+     "ro": 25
+    }
+   },
+   {
+    "designation": "RHS250x150x12.5",
+    "dims": {
+     "h": 250,
+     "b": 150,
+     "t": 12.5,
+     "ro": 37.5
+    }
+   },
+   {
+    "designation": "RHS300x200x8",
+    "dims": {
+     "h": 300,
+     "b": 200,
+     "t": 8,
+     "ro": 20
+    }
+   },
+   {
+    "designation": "RHS300x200x10",
+    "dims": {
+     "h": 300,
+     "b": 200,
+     "t": 10,
+     "ro": 25
+    }
+   },
+   {
+    "designation": "RHS300x200x12.5",
+    "dims": {
+     "h": 300,
+     "b": 200,
+     "t": 12.5,
+     "ro": 37.5
+    }
+   },
+   {
+    "designation": "RHS300x200x16",
+    "dims": {
+     "h": 300,
+     "b": 200,
+     "t": 16,
+     "ro": 48
+    }
+   },
+   {
+    "designation": "RHS350x150x8",
+    "dims": {
+     "h": 350,
+     "b": 150,
+     "t": 8,
+     "ro": 20
+    }
+   },
+   {
+    "designation": "RHS350x150x10",
+    "dims": {
+     "h": 350,
+     "b": 150,
+     "t": 10,
+     "ro": 25
+    }
+   },
+   {
+    "designation": "RHS350x250x10",
+    "dims": {
+     "h": 350,
+     "b": 250,
+     "t": 10,
+     "ro": 25
+    }
+   },
+   {
+    "designation": "RHS400x200x10",
+    "dims": {
+     "h": 400,
+     "b": 200,
+     "t": 10,
+     "ro": 25
+    }
+   },
+   {
+    "designation": "RHS400x200x12.5",
+    "dims": {
+     "h": 400,
+     "b": 200,
+     "t": 12.5,
+     "ro": 37.5
+    }
+   },
+   {
+    "designation": "RHS400x200x16",
+    "dims": {
+     "h": 400,
+     "b": 200,
+     "t": 16,
+     "ro": 48
+    }
+   },
+   {
+    "designation": "RHS400x300x10",
+    "dims": {
+     "h": 400,
+     "b": 300,
+     "t": 10,
+     "ro": 25
+    }
+   },
+   {
+    "designation": "RHS400x300x12.5",
+    "dims": {
+     "h": 400,
+     "b": 300,
+     "t": 12.5,
+     "ro": 37.5
+    }
+   },
+   {
+    "designation": "RHS400x300x16",
+    "dims": {
+     "h": 400,
+     "b": 300,
+     "t": 16,
+     "ro": 48
+    }
+   }
+  ]
+ },
+ "EN 10056-1 L-angles (equal & unequal leg)": {
+  "family": "EN 10056-1 L-angles (equal & unequal leg)",
+  "units": "mm",
+  "source": "Cross-checked against RoyMech reproductions of EN 10056-1:1998 (equal-leg and unequal-leg dimension/property tables, roymech.org) and Montanstahl EN 10056-1:1998 datasheets (equal & unequal leg angles). r = root radius r1; toe radius r2 (approx r1/2) not listed. Unequal-leg radii follow the standard carbon-steel EN 10056-1 convention (RoyMech / British Steel Blue Book); Montanstahl (stainless) uses a larger radius convention and was used only to confirm which sizes exist.",
+  "items": [
+   {
+    "designation": "L20x20x3",
+    "dims": {
+     "h": 20,
+     "b": 20,
+     "t": 3,
+     "r": 3.5
+    }
+   },
+   {
+    "designation": "L25x25x3",
+    "dims": {
+     "h": 25,
+     "b": 25,
+     "t": 3,
+     "r": 3.5
+    }
+   },
+   {
+    "designation": "L25x25x4",
+    "dims": {
+     "h": 25,
+     "b": 25,
+     "t": 4,
+     "r": 3.5
+    }
+   },
+   {
+    "designation": "L30x30x3",
+    "dims": {
+     "h": 30,
+     "b": 30,
+     "t": 3,
+     "r": 5
+    }
+   },
+   {
+    "designation": "L30x30x4",
+    "dims": {
+     "h": 30,
+     "b": 30,
+     "t": 4,
+     "r": 5
+    }
+   },
+   {
+    "designation": "L35x35x4",
+    "dims": {
+     "h": 35,
+     "b": 35,
+     "t": 4,
+     "r": 5
+    }
+   },
+   {
+    "designation": "L40x40x4",
+    "dims": {
+     "h": 40,
+     "b": 40,
+     "t": 4,
+     "r": 6
+    }
+   },
+   {
+    "designation": "L40x40x5",
+    "dims": {
+     "h": 40,
+     "b": 40,
+     "t": 5,
+     "r": 6
+    }
+   },
+   {
+    "designation": "L45x45x4.5",
+    "dims": {
+     "h": 45,
+     "b": 45,
+     "t": 4.5,
+     "r": 7
+    }
+   },
+   {
+    "designation": "L45x45x5",
+    "dims": {
+     "h": 45,
+     "b": 45,
+     "t": 5,
+     "r": 7
+    }
+   },
+   {
+    "designation": "L50x50x5",
+    "dims": {
+     "h": 50,
+     "b": 50,
+     "t": 5,
+     "r": 7
+    }
+   },
+   {
+    "designation": "L50x50x6",
+    "dims": {
+     "h": 50,
+     "b": 50,
+     "t": 6,
+     "r": 7
+    }
+   },
+   {
+    "designation": "L60x60x5",
+    "dims": {
+     "h": 60,
+     "b": 60,
+     "t": 5,
+     "r": 8
+    }
+   },
+   {
+    "designation": "L60x60x6",
+    "dims": {
+     "h": 60,
+     "b": 60,
+     "t": 6,
+     "r": 8
+    }
+   },
+   {
+    "designation": "L60x60x8",
+    "dims": {
+     "h": 60,
+     "b": 60,
+     "t": 8,
+     "r": 8
+    }
+   },
+   {
+    "designation": "L65x65x7",
+    "dims": {
+     "h": 65,
+     "b": 65,
+     "t": 7,
+     "r": 9
+    }
+   },
+   {
+    "designation": "L70x70x6",
+    "dims": {
+     "h": 70,
+     "b": 70,
+     "t": 6,
+     "r": 9
+    }
+   },
+   {
+    "designation": "L70x70x7",
+    "dims": {
+     "h": 70,
+     "b": 70,
+     "t": 7,
+     "r": 9
+    }
+   },
+   {
+    "designation": "L75x75x8",
+    "dims": {
+     "h": 75,
+     "b": 75,
+     "t": 8,
+     "r": 9
+    }
+   },
+   {
+    "designation": "L80x80x8",
+    "dims": {
+     "h": 80,
+     "b": 80,
+     "t": 8,
+     "r": 10
+    }
+   },
+   {
+    "designation": "L80x80x10",
+    "dims": {
+     "h": 80,
+     "b": 80,
+     "t": 10,
+     "r": 10
+    }
+   },
+   {
+    "designation": "L90x90x8",
+    "dims": {
+     "h": 90,
+     "b": 90,
+     "t": 8,
+     "r": 11
+    }
+   },
+   {
+    "designation": "L90x90x9",
+    "dims": {
+     "h": 90,
+     "b": 90,
+     "t": 9,
+     "r": 11
+    }
+   },
+   {
+    "designation": "L90x90x10",
+    "dims": {
+     "h": 90,
+     "b": 90,
+     "t": 10,
+     "r": 11
+    }
+   },
+   {
+    "designation": "L100x100x8",
+    "dims": {
+     "h": 100,
+     "b": 100,
+     "t": 8,
+     "r": 12
+    }
+   },
+   {
+    "designation": "L100x100x10",
+    "dims": {
+     "h": 100,
+     "b": 100,
+     "t": 10,
+     "r": 12
+    }
+   },
+   {
+    "designation": "L100x100x12",
+    "dims": {
+     "h": 100,
+     "b": 100,
+     "t": 12,
+     "r": 12
+    }
+   },
+   {
+    "designation": "L120x120x10",
+    "dims": {
+     "h": 120,
+     "b": 120,
+     "t": 10,
+     "r": 13
+    }
+   },
+   {
+    "designation": "L120x120x11",
+    "dims": {
+     "h": 120,
+     "b": 120,
+     "t": 11,
+     "r": 13
+    }
+   },
+   {
+    "designation": "L120x120x12",
+    "dims": {
+     "h": 120,
+     "b": 120,
+     "t": 12,
+     "r": 13
+    }
+   },
+   {
+    "designation": "L130x130x12",
+    "dims": {
+     "h": 130,
+     "b": 130,
+     "t": 12,
+     "r": 14
+    }
+   },
+   {
+    "designation": "L150x150x10",
+    "dims": {
+     "h": 150,
+     "b": 150,
+     "t": 10,
+     "r": 16
+    }
+   },
+   {
+    "designation": "L150x150x12",
+    "dims": {
+     "h": 150,
+     "b": 150,
+     "t": 12,
+     "r": 16
+    }
+   },
+   {
+    "designation": "L150x150x14",
+    "dims": {
+     "h": 150,
+     "b": 150,
+     "t": 14,
+     "r": 16
+    }
+   },
+   {
+    "designation": "L150x150x15",
+    "dims": {
+     "h": 150,
+     "b": 150,
+     "t": 15,
+     "r": 16
+    }
+   },
+   {
+    "designation": "L160x160x15",
+    "dims": {
+     "h": 160,
+     "b": 160,
+     "t": 15,
+     "r": 17
+    }
+   },
+   {
+    "designation": "L180x180x16",
+    "dims": {
+     "h": 180,
+     "b": 180,
+     "t": 16,
+     "r": 18
+    }
+   },
+   {
+    "designation": "L180x180x18",
+    "dims": {
+     "h": 180,
+     "b": 180,
+     "t": 18,
+     "r": 18
+    }
+   },
+   {
+    "designation": "L200x200x16",
+    "dims": {
+     "h": 200,
+     "b": 200,
+     "t": 16,
+     "r": 18
+    }
+   },
+   {
+    "designation": "L200x200x18",
+    "dims": {
+     "h": 200,
+     "b": 200,
+     "t": 18,
+     "r": 18
+    }
+   },
+   {
+    "designation": "L200x200x20",
+    "dims": {
+     "h": 200,
+     "b": 200,
+     "t": 20,
+     "r": 18
+    }
+   },
+   {
+    "designation": "L200x200x24",
+    "dims": {
+     "h": 200,
+     "b": 200,
+     "t": 24,
+     "r": 18
+    }
+   },
+   {
+    "designation": "L30x20x3",
+    "dims": {
+     "h": 30,
+     "b": 20,
+     "t": 3,
+     "r": 4
+    }
+   },
+   {
+    "designation": "L30x20x4",
+    "dims": {
+     "h": 30,
+     "b": 20,
+     "t": 4,
+     "r": 4
+    }
+   },
+   {
+    "designation": "L40x20x4",
+    "dims": {
+     "h": 40,
+     "b": 20,
+     "t": 4,
+     "r": 4
+    }
+   },
+   {
+    "designation": "L40x25x4",
+    "dims": {
+     "h": 40,
+     "b": 25,
+     "t": 4,
+     "r": 4
+    }
+   },
+   {
+    "designation": "L45x30x4",
+    "dims": {
+     "h": 45,
+     "b": 30,
+     "t": 4,
+     "r": 4.5
+    }
+   },
+   {
+    "designation": "L50x30x5",
+    "dims": {
+     "h": 50,
+     "b": 30,
+     "t": 5,
+     "r": 5
+    }
+   },
+   {
+    "designation": "L60x30x5",
+    "dims": {
+     "h": 60,
+     "b": 30,
+     "t": 5,
+     "r": 6
+    }
+   },
+   {
+    "designation": "L60x40x5",
+    "dims": {
+     "h": 60,
+     "b": 40,
+     "t": 5,
+     "r": 6
+    }
+   },
+   {
+    "designation": "L60x40x6",
+    "dims": {
+     "h": 60,
+     "b": 40,
+     "t": 6,
+     "r": 6
+    }
+   },
+   {
+    "designation": "L65x50x5",
+    "dims": {
+     "h": 65,
+     "b": 50,
+     "t": 5,
+     "r": 6
+    }
+   },
+   {
+    "designation": "L70x50x6",
+    "dims": {
+     "h": 70,
+     "b": 50,
+     "t": 6,
+     "r": 7
+    }
+   },
+   {
+    "designation": "L75x50x6",
+    "dims": {
+     "h": 75,
+     "b": 50,
+     "t": 6,
+     "r": 7
+    }
+   },
+   {
+    "designation": "L75x50x8",
+    "dims": {
+     "h": 75,
+     "b": 50,
+     "t": 8,
+     "r": 7
+    }
+   },
+   {
+    "designation": "L80x40x6",
+    "dims": {
+     "h": 80,
+     "b": 40,
+     "t": 6,
+     "r": 7
+    }
+   },
+   {
+    "designation": "L80x40x8",
+    "dims": {
+     "h": 80,
+     "b": 40,
+     "t": 8,
+     "r": 7
+    }
+   },
+   {
+    "designation": "L80x60x7",
+    "dims": {
+     "h": 80,
+     "b": 60,
+     "t": 7,
+     "r": 8
+    }
+   },
+   {
+    "designation": "L90x60x6",
+    "dims": {
+     "h": 90,
+     "b": 60,
+     "t": 6,
+     "r": 7
+    }
+   },
+   {
+    "designation": "L90x60x8",
+    "dims": {
+     "h": 90,
+     "b": 60,
+     "t": 8,
+     "r": 7
+    }
+   },
+   {
+    "designation": "L100x50x6",
+    "dims": {
+     "h": 100,
+     "b": 50,
+     "t": 6,
+     "r": 8
+    }
+   },
+   {
+    "designation": "L100x50x8",
+    "dims": {
+     "h": 100,
+     "b": 50,
+     "t": 8,
+     "r": 8
+    }
+   },
+   {
+    "designation": "L100x65x7",
+    "dims": {
+     "h": 100,
+     "b": 65,
+     "t": 7,
+     "r": 10
+    }
+   },
+   {
+    "designation": "L100x65x8",
+    "dims": {
+     "h": 100,
+     "b": 65,
+     "t": 8,
+     "r": 10
+    }
+   },
+   {
+    "designation": "L100x65x10",
+    "dims": {
+     "h": 100,
+     "b": 65,
+     "t": 10,
+     "r": 10
+    }
+   },
+   {
+    "designation": "L100x75x8",
+    "dims": {
+     "h": 100,
+     "b": 75,
+     "t": 8,
+     "r": 10
+    }
+   },
+   {
+    "designation": "L100x75x10",
+    "dims": {
+     "h": 100,
+     "b": 75,
+     "t": 10,
+     "r": 10
+    }
+   },
+   {
+    "designation": "L120x80x8",
+    "dims": {
+     "h": 120,
+     "b": 80,
+     "t": 8,
+     "r": 11
+    }
+   },
+   {
+    "designation": "L120x80x10",
+    "dims": {
+     "h": 120,
+     "b": 80,
+     "t": 10,
+     "r": 11
+    }
+   },
+   {
+    "designation": "L120x80x12",
+    "dims": {
+     "h": 120,
+     "b": 80,
+     "t": 12,
+     "r": 11
+    }
+   },
+   {
+    "designation": "L125x75x8",
+    "dims": {
+     "h": 125,
+     "b": 75,
+     "t": 8,
+     "r": 11
+    }
+   },
+   {
+    "designation": "L125x75x10",
+    "dims": {
+     "h": 125,
+     "b": 75,
+     "t": 10,
+     "r": 11
+    }
+   },
+   {
+    "designation": "L125x75x12",
+    "dims": {
+     "h": 125,
+     "b": 75,
+     "t": 12,
+     "r": 11
+    }
+   },
+   {
+    "designation": "L130x65x8",
+    "dims": {
+     "h": 130,
+     "b": 65,
+     "t": 8,
+     "r": 11
+    }
+   },
+   {
+    "designation": "L130x65x10",
+    "dims": {
+     "h": 130,
+     "b": 65,
+     "t": 10,
+     "r": 11
+    }
+   },
+   {
+    "designation": "L150x75x9",
+    "dims": {
+     "h": 150,
+     "b": 75,
+     "t": 9,
+     "r": 11
+    }
+   },
+   {
+    "designation": "L150x75x10",
+    "dims": {
+     "h": 150,
+     "b": 75,
+     "t": 10,
+     "r": 11
+    }
+   },
+   {
+    "designation": "L150x75x11",
+    "dims": {
+     "h": 150,
+     "b": 75,
+     "t": 11,
+     "r": 11
+    }
+   },
+   {
+    "designation": "L150x90x10",
+    "dims": {
+     "h": 150,
+     "b": 90,
+     "t": 10,
+     "r": 12
+    }
+   },
+   {
+    "designation": "L150x90x12",
+    "dims": {
+     "h": 150,
+     "b": 90,
+     "t": 12,
+     "r": 12
+    }
+   },
+   {
+    "designation": "L150x90x15",
+    "dims": {
+     "h": 150,
+     "b": 90,
+     "t": 15,
+     "r": 12
+    }
+   },
+   {
+    "designation": "L150x100x10",
+    "dims": {
+     "h": 150,
+     "b": 100,
+     "t": 10,
+     "r": 12
+    }
+   },
+   {
+    "designation": "L150x100x12",
+    "dims": {
+     "h": 150,
+     "b": 100,
+     "t": 12,
+     "r": 12
+    }
+   },
+   {
+    "designation": "L200x100x10",
+    "dims": {
+     "h": 200,
+     "b": 100,
+     "t": 10,
+     "r": 15
+    }
+   },
+   {
+    "designation": "L200x100x12",
+    "dims": {
+     "h": 200,
+     "b": 100,
+     "t": 12,
+     "r": 15
+    }
+   },
+   {
+    "designation": "L200x100x15",
+    "dims": {
+     "h": 200,
+     "b": 100,
+     "t": 15,
+     "r": 15
+    }
+   },
+   {
+    "designation": "L200x150x12",
+    "dims": {
+     "h": 200,
+     "b": 150,
+     "t": 12,
+     "r": 15
+    }
+   },
+   {
+    "designation": "L200x150x15",
+    "dims": {
+     "h": 200,
+     "b": 150,
+     "t": 15,
+     "r": 15
+    }
+   }
+  ]
+ },
+ "AISC W-shapes (wide-flange)": {
+  "family": "AISC W-shapes (wide-flange)",
+  "units": "mm",
+  "source": "Primary: AISC Steel Construction Manual, 15th ed. / AISC Shapes Database v15.0 (US customary values converted at 25.4 mm/in). Independent second source used for verification: AISC Shapes Database v15.0 CSV mirror at github.com/NHERI-SimCenter/BracedFrameModeling (raw file aisc-shapes-database-v15.0.csv), with per-shape spot-checks against linecad.com. Dimensions: d, bf, tw, tf, and k = detailing distance kdet (largest-fillet basis, per AISC).",
+  "items": [
+   {
+    "designation": "W8x31",
+    "dims": {
+     "d": 203.2,
+     "bf": 203.1,
+     "tw": 7.24,
+     "tf": 11.05,
+     "k": 28.6
+    }
+   },
+   {
+    "designation": "W8x40",
+    "dims": {
+     "d": 209.5,
+     "bf": 205,
+     "tw": 9.14,
+     "tf": 14.22,
+     "k": 31.8
+    }
+   },
+   {
+    "designation": "W8x48",
+    "dims": {
+     "d": 215.9,
+     "bf": 206,
+     "tw": 10.16,
+     "tf": 17.4,
+     "k": 34.9
+    }
+   },
+   {
+    "designation": "W10x33",
+    "dims": {
+     "d": 247.1,
+     "bf": 202.2,
+     "tw": 7.37,
+     "tf": 11.05,
+     "k": 28.6
+    }
+   },
+   {
+    "designation": "W10x45",
+    "dims": {
+     "d": 256.5,
+     "bf": 203.7,
+     "tw": 8.89,
+     "tf": 15.75,
+     "k": 33.3
+    }
+   },
+   {
+    "designation": "W10x49",
+    "dims": {
+     "d": 253.5,
+     "bf": 254,
+     "tw": 8.64,
+     "tf": 14.22,
+     "k": 31.8
+    }
+   },
+   {
+    "designation": "W10x60",
+    "dims": {
+     "d": 259.6,
+     "bf": 256,
+     "tw": 10.67,
+     "tf": 17.27,
+     "k": 34.9
+    }
+   },
+   {
+    "designation": "W12x26",
+    "dims": {
+     "d": 310.4,
+     "bf": 164.8,
+     "tw": 5.84,
+     "tf": 9.65,
+     "k": 27
+    }
+   },
+   {
+    "designation": "W12x40",
+    "dims": {
+     "d": 303.3,
+     "bf": 203.3,
+     "tw": 7.49,
+     "tf": 13.08,
+     "k": 34.9
+    }
+   },
+   {
+    "designation": "W12x50",
+    "dims": {
+     "d": 309.6,
+     "bf": 205.2,
+     "tw": 9.4,
+     "tf": 16.26,
+     "k": 38.1
+    }
+   },
+   {
+    "designation": "W12x65",
+    "dims": {
+     "d": 307.8,
+     "bf": 304.8,
+     "tw": 9.91,
+     "tf": 15.37,
+     "k": 38.1
+    }
+   },
+   {
+    "designation": "W12x72",
+    "dims": {
+     "d": 311.1,
+     "bf": 305.8,
+     "tw": 10.92,
+     "tf": 17.02,
+     "k": 39.7
+    }
+   },
+   {
+    "designation": "W12x87",
+    "dims": {
+     "d": 318.3,
+     "bf": 308,
+     "tw": 13.08,
+     "tf": 20.57,
+     "k": 42.9
+    }
+   },
+   {
+    "designation": "W14x22",
+    "dims": {
+     "d": 349,
+     "bf": 127,
+     "tw": 5.84,
+     "tf": 8.51,
+     "k": 27
+    }
+   },
+   {
+    "designation": "W14x30",
+    "dims": {
+     "d": 351.5,
+     "bf": 170.9,
+     "tw": 6.86,
+     "tf": 9.78,
+     "k": 28.6
+    }
+   },
+   {
+    "designation": "W14x43",
+    "dims": {
+     "d": 347,
+     "bf": 203.1,
+     "tw": 7.75,
+     "tf": 13.46,
+     "k": 34.9
+    }
+   },
+   {
+    "designation": "W14x53",
+    "dims": {
+     "d": 353.6,
+     "bf": 204.7,
+     "tw": 9.4,
+     "tf": 16.76,
+     "k": 38.1
+    }
+   },
+   {
+    "designation": "W14x61",
+    "dims": {
+     "d": 352.8,
+     "bf": 253.9,
+     "tw": 9.52,
+     "tf": 16.38,
+     "k": 38.1
+    }
+   },
+   {
+    "designation": "W14x90",
+    "dims": {
+     "d": 356.1,
+     "bf": 368.8,
+     "tw": 11.18,
+     "tf": 18.03,
+     "k": 50.8
+    }
+   },
+   {
+    "designation": "W14x120",
+    "dims": {
+     "d": 367.8,
+     "bf": 372.6,
+     "tw": 14.99,
+     "tf": 23.88,
+     "k": 57.1
+    }
+   },
+   {
+    "designation": "W16x31",
+    "dims": {
+     "d": 403.4,
+     "bf": 140.3,
+     "tw": 6.99,
+     "tf": 11.18,
+     "k": 28.6
+    }
+   },
+   {
+    "designation": "W16x40",
+    "dims": {
+     "d": 406.7,
+     "bf": 177.7,
+     "tw": 7.75,
+     "tf": 12.83,
+     "k": 30.2
+    }
+   },
+   {
+    "designation": "W16x50",
+    "dims": {
+     "d": 413,
+     "bf": 179.6,
+     "tw": 9.65,
+     "tf": 16,
+     "k": 33.3
+    }
+   },
+   {
+    "designation": "W16x67",
+    "dims": {
+     "d": 414.8,
+     "bf": 260,
+     "tw": 10.03,
+     "tf": 16.89,
+     "k": 39.7
+    }
+   },
+   {
+    "designation": "W16x89",
+    "dims": {
+     "d": 425.4,
+     "bf": 263.3,
+     "tw": 13.33,
+     "tf": 22.22,
+     "k": 44.4
+    }
+   },
+   {
+    "designation": "W18x35",
+    "dims": {
+     "d": 449.6,
+     "bf": 152.4,
+     "tw": 7.62,
+     "tf": 10.79,
+     "k": 28.6
+    }
+   },
+   {
+    "designation": "W18x40",
+    "dims": {
+     "d": 454.7,
+     "bf": 152.8,
+     "tw": 8,
+     "tf": 13.33,
+     "k": 30.2
+    }
+   },
+   {
+    "designation": "W18x50",
+    "dims": {
+     "d": 456.9,
+     "bf": 190.4,
+     "tw": 9.02,
+     "tf": 14.48,
+     "k": 31.8
+    }
+   },
+   {
+    "designation": "W18x55",
+    "dims": {
+     "d": 460,
+     "bf": 191.3,
+     "tw": 9.91,
+     "tf": 16,
+     "k": 33.3
+    }
+   },
+   {
+    "designation": "W18x65",
+    "dims": {
+     "d": 466.1,
+     "bf": 192.8,
+     "tw": 11.43,
+     "tf": 19.05,
+     "k": 36.5
+    }
+   },
+   {
+    "designation": "W18x76",
+    "dims": {
+     "d": 462.5,
+     "bf": 280.3,
+     "tw": 10.79,
+     "tf": 17.27,
+     "k": 39.7
+    }
+   },
+   {
+    "designation": "W18x86",
+    "dims": {
+     "d": 467.1,
+     "bf": 281.7,
+     "tw": 12.19,
+     "tf": 19.56,
+     "k": 41.3
+    }
+   },
+   {
+    "designation": "W21x44",
+    "dims": {
+     "d": 524.8,
+     "bf": 165.1,
+     "tw": 8.89,
+     "tf": 11.43,
+     "k": 28.6
+    }
+   },
+   {
+    "designation": "W21x50",
+    "dims": {
+     "d": 529.1,
+     "bf": 165.9,
+     "tw": 9.65,
+     "tf": 13.59,
+     "k": 31.8
+    }
+   },
+   {
+    "designation": "W21x62",
+    "dims": {
+     "d": 533.1,
+     "bf": 209.3,
+     "tw": 10.16,
+     "tf": 15.62,
+     "k": 33.3
+    }
+   },
+   {
+    "designation": "W21x68",
+    "dims": {
+     "d": 536.7,
+     "bf": 210.1,
+     "tw": 10.92,
+     "tf": 17.4,
+     "k": 34.9
+    }
+   },
+   {
+    "designation": "W21x83",
+    "dims": {
+     "d": 544.3,
+     "bf": 212.2,
+     "tw": 13.08,
+     "tf": 21.21,
+     "k": 38.1
+    }
+   },
+   {
+    "designation": "W21x101",
+    "dims": {
+     "d": 542.5,
+     "bf": 312.2,
+     "tw": 12.7,
+     "tf": 20.32,
+     "k": 52.4
+    }
+   },
+   {
+    "designation": "W24x55",
+    "dims": {
+     "d": 598.7,
+     "bf": 177.9,
+     "tw": 10.03,
+     "tf": 12.83,
+     "k": 36.5
+    }
+   },
+   {
+    "designation": "W24x68",
+    "dims": {
+     "d": 602.7,
+     "bf": 227.7,
+     "tw": 10.54,
+     "tf": 14.86,
+     "k": 47.6
+    }
+   },
+   {
+    "designation": "W24x76",
+    "dims": {
+     "d": 607.6,
+     "bf": 228.3,
+     "tw": 11.18,
+     "tf": 17.27,
+     "k": 49.2
+    }
+   },
+   {
+    "designation": "W24x84",
+    "dims": {
+     "d": 612.1,
+     "bf": 229.1,
+     "tw": 11.94,
+     "tf": 19.56,
+     "k": 52.4
+    }
+   },
+   {
+    "designation": "W24x104",
+    "dims": {
+     "d": 611.1,
+     "bf": 323.8,
+     "tw": 12.7,
+     "tf": 19.05,
+     "k": 52.4
+    }
+   },
+   {
+    "designation": "W27x84",
+    "dims": {
+     "d": 678.4,
+     "bf": 253,
+     "tw": 11.68,
+     "tf": 16.26,
+     "k": 47.6
+    }
+   },
+   {
+    "designation": "W27x94",
+    "dims": {
+     "d": 683.8,
+     "bf": 253.7,
+     "tw": 12.45,
+     "tf": 18.92,
+     "k": 49.2
+    }
+   },
+   {
+    "designation": "W27x102",
+    "dims": {
+     "d": 688.1,
+     "bf": 254.4,
+     "tw": 13.08,
+     "tf": 21.08,
+     "k": 52.4
+    }
+   },
+   {
+    "designation": "W30x90",
+    "dims": {
+     "d": 750.1,
+     "bf": 264.2,
+     "tw": 11.94,
+     "tf": 15.49,
+     "k": 47.6
+    }
+   },
+   {
+    "designation": "W30x99",
+    "dims": {
+     "d": 753.1,
+     "bf": 265.4,
+     "tw": 13.21,
+     "tf": 17.02,
+     "k": 50.8
+    }
+   },
+   {
+    "designation": "W30x108",
+    "dims": {
+     "d": 757.7,
+     "bf": 266.1,
+     "tw": 13.84,
+     "tf": 19.3,
+     "k": 50.8
+    }
+   },
+   {
+    "designation": "W30x116",
+    "dims": {
+     "d": 762.3,
+     "bf": 266.6,
+     "tw": 14.35,
+     "tf": 21.59,
+     "k": 54
+    }
+   },
+   {
+    "designation": "W33x118",
+    "dims": {
+     "d": 834.6,
+     "bf": 291.6,
+     "tw": 13.97,
+     "tf": 18.8,
+     "k": 50.8
+    }
+   },
+   {
+    "designation": "W33x130",
+    "dims": {
+     "d": 840.5,
+     "bf": 292.4,
+     "tw": 14.73,
+     "tf": 21.72,
+     "k": 54
+    }
+   },
+   {
+    "designation": "W36x135",
+    "dims": {
+     "d": 903,
+     "bf": 303.5,
+     "tw": 15.24,
+     "tf": 20.07,
+     "k": 52.4
+    }
+   },
+   {
+    "designation": "W36x150",
+    "dims": {
+     "d": 910.6,
+     "bf": 304.2,
+     "tw": 15.88,
+     "tf": 23.88,
+     "k": 55.6
+    }
+   },
+   {
+    "designation": "W36x160",
+    "dims": {
+     "d": 914.7,
+     "bf": 304.8,
+     "tw": 16.51,
+     "tf": 25.91,
+     "k": 57.1
+    }
+   },
+   {
+    "designation": "W36x194",
+    "dims": {
+     "d": 926.8,
+     "bf": 307.7,
+     "tw": 19.43,
+     "tf": 32,
+     "k": 63.5
+    }
+   }
+  ]
+ },
+ "AISC HSS (round + rectangular/square), representative common subset": {
+  "family": "AISC HSS (round + rectangular/square), representative common subset",
+  "units": "mm",
+  "source": "Primary: AISC Steel Construction Manual (15th/16th ed.) & AISC Shapes Database v15.0/v16.0; HSS per ASTM A500, design wall thickness tdes = 0.93 x nominal wall (ERW). Second independent source (cross-check): Dlubal cross-section properties database (Round/Rect HSS, AISC 13/15) and beamdimensions.com AISC shape database, plus Steel Tube Institute / steelcalculator.app confirming tdes = 0.93*tnom and the AISC section-property convention of exterior corner radius = 2*t (interior = 1*t). Nominal US-customary outside dimensions converted at 1 in = 25.4 mm. All designations, OD conversions, tdes and ro = 2*tdes values verified consistent across both sources; no corrections required.",
+  "items": [
+   {
+    "designation": "HSS4.000x0.250",
+    "dims": {
+     "D": 101.6,
+     "t": 5.9
+    }
+   },
+   {
+    "designation": "HSS5.000x0.250",
+    "dims": {
+     "D": 127,
+     "t": 5.9
+    }
+   },
+   {
+    "designation": "HSS5.563x0.375",
+    "dims": {
+     "D": 141.3,
+     "t": 8.86
+    }
+   },
+   {
+    "designation": "HSS6.000x0.375",
+    "dims": {
+     "D": 152.4,
+     "t": 8.86
+    }
+   },
+   {
+    "designation": "HSS6.625x0.500",
+    "dims": {
+     "D": 168.28,
+     "t": 11.81
+    }
+   },
+   {
+    "designation": "HSS8.625x0.500",
+    "dims": {
+     "D": 219.08,
+     "t": 11.81
+    }
+   },
+   {
+    "designation": "HSS10.000x0.500",
+    "dims": {
+     "D": 254,
+     "t": 11.81
+    }
+   },
+   {
+    "designation": "HSS10.750x0.500",
+    "dims": {
+     "D": 273.05,
+     "t": 11.81
+    }
+   },
+   {
+    "designation": "HSS4x4x1/4",
+    "dims": {
+     "h": 101.6,
+     "b": 101.6,
+     "t": 5.9,
+     "ro": 11.81
+    }
+   },
+   {
+    "designation": "HSS4x4x3/8",
+    "dims": {
+     "h": 101.6,
+     "b": 101.6,
+     "t": 8.86,
+     "ro": 17.72
+    }
+   },
+   {
+    "designation": "HSS5x5x5/16",
+    "dims": {
+     "h": 127,
+     "b": 127,
+     "t": 7.38,
+     "ro": 14.76
+    }
+   },
+   {
+    "designation": "HSS6x6x3/8",
+    "dims": {
+     "h": 152.4,
+     "b": 152.4,
+     "t": 8.86,
+     "ro": 17.72
+    }
+   },
+   {
+    "designation": "HSS6x6x1/2",
+    "dims": {
+     "h": 152.4,
+     "b": 152.4,
+     "t": 11.81,
+     "ro": 23.62
+    }
+   },
+   {
+    "designation": "HSS8x8x1/2",
+    "dims": {
+     "h": 203.2,
+     "b": 203.2,
+     "t": 11.81,
+     "ro": 23.62
+    }
+   },
+   {
+    "designation": "HSS8x8x5/8",
+    "dims": {
+     "h": 203.2,
+     "b": 203.2,
+     "t": 14.76,
+     "ro": 29.53
+    }
+   },
+   {
+    "designation": "HSS10x10x1/2",
+    "dims": {
+     "h": 254,
+     "b": 254,
+     "t": 11.81,
+     "ro": 23.62
+    }
+   },
+   {
+    "designation": "HSS12x12x1/2",
+    "dims": {
+     "h": 304.8,
+     "b": 304.8,
+     "t": 11.81,
+     "ro": 23.62
+    }
+   },
+   {
+    "designation": "HSS6x4x1/4",
+    "dims": {
+     "h": 152.4,
+     "b": 101.6,
+     "t": 5.9,
+     "ro": 11.81
+    }
+   },
+   {
+    "designation": "HSS8x4x3/8",
+    "dims": {
+     "h": 203.2,
+     "b": 101.6,
+     "t": 8.86,
+     "ro": 17.72
+    }
+   },
+   {
+    "designation": "HSS8x6x1/2",
+    "dims": {
+     "h": 203.2,
+     "b": 152.4,
+     "t": 11.81,
+     "ro": 23.62
+    }
+   },
+   {
+    "designation": "HSS10x6x3/8",
+    "dims": {
+     "h": 254,
+     "b": 152.4,
+     "t": 8.86,
+     "ro": 17.72
+    }
+   },
+   {
+    "designation": "HSS12x8x1/2",
+    "dims": {
+     "h": 304.8,
+     "b": 203.2,
+     "t": 11.81,
+     "ro": 23.62
+    }
+   }
+  ]
+ }
+}
